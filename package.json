@@ -1,0 +1,25 @@
+{
+  "name": "d3up-calc",
+  "version": "0.0.0",
+  "description": "Diablo 3 Gameplay Mechanics Simulator",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/D3Up/Calculator.git"
+  },
+  "keywords": [
+    "diablo",
+    "diablo",
+    "3",
+    "calculator"
+  ],
+  "author": "Aaron Cox",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "~1.0",
+    "chai" : "~0.5"
+  }
+}

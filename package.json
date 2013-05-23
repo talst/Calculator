@@ -1,6 +1,6 @@
 {
   "name": "d3up-calc",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Diablo 3 Gameplay Mechanics Simulator",
   "main": "main.js",
   "scripts": {
@@ -18,12 +18,12 @@
   ],
   "author": "Aaron Cox",
   "license": "MIT",
-	"dependencies": {
-		"lodash": "~1.2"
-	},
+  "dependencies": {
+    "lodash": "~1.2"
+  },
   "devDependencies": {
     "mocha": "~1.10",
-    "chai" : "~1.6",
-		"sinon": "~1.7"
+    "chai": "~1.6",
+    "sinon": "~1.7"
   }
 }

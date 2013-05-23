@@ -1,0 +1,305 @@
+[
+	{
+		"name": "Jesta - 60/60 Barbarian (Build #1)",
+		"given": {
+			"_authentic" : true,
+			"_characterBt" : "jesta#1121",
+			"_characterId" : "1107072",
+			"_characterRg" : "1",
+			"_created" : 1367856938,
+			"gear" : {
+				"helm" : {
+					"id" : 69,
+					"name" : "Andariel's Visage",
+					"attrs" : {
+						"strength" : 155,
+						"poison-resist" : 48,
+						"attack-speed" : 9,
+						"life-regen" : 180,
+						"critical-hit" : 4.5
+					},
+					"stats" : {
+						"armor" : 377
+					},
+					"icon" : "unique_helm_003_104_demonhunter_male",
+					"type" : "helm",
+					"quality" : 6,
+					"_d3id" : "item/ClsI7-OAlwYSBwgEFQLZapEdlL80ih2BtT6MHXWx7PAd48Qrbx2RqGXGHQZ9lkEwCThrQABQEmCvAmohCgwIABDHrs-AgYCAwDgSEQgAEgcIBBVm9YtfMAk4AEABGPubqekNUAJYAA",
+					"sockets" : [
+						"radiant_star_ruby"
+					]
+				},
+				"chest" : {
+					"id" : 70,
+					"name" : "Protection Abjuration",
+					"attrs" : {
+						"strength" : 60,
+						"vitality" : 245,
+						"resist-all" : 54
+					},
+					"stats" : {
+						"armor" : 443
+					},
+					"icon" : "chestarmor_206_barbarian_male",
+					"type" : "chest",
+					"quality" : 5,
+					"_d3id" : "item/Cj4Itd3eqAsSBwgEFS8iGWAduvHsGh0pEnPgHZwuC38d3iVSyyILCAEVtUQDABgOIBYwCTj3AUAASAJQDGCXBBjeiMmBDFACWAA",
+					"sockets" : null
+				},
+				"boots" : {
+					"id" : 71,
+					"name" : "Immortal King's Stride",
+					"attrs" : {
+						"strength" : 100,
+						"vitality" : 90,
+						"poison-resist" : 47,
+						"resist-all" : 74,
+						"plus-movement" : 12
+					},
+					"stats" : {
+						"armor" : 312
+					},
+					"icon" : "unique_boots_012_104_demonhunter_male",
+					"type" : "boots",
+					"quality" : 7,
+					"_d3id" : "item/CjkI5cHChgUSBwgEFYMEfeod48Qrbx2Ivr4hHQrqUAgdaNwK8R0i7My4HVtOgMkwCTiBAUAAUBJg1QIY-e2X2AJQAlgAoAH57ZfYAqABwISzoQOgAaLBx74N",
+					"set" : "immortal-kings-legend",
+					"sockets" : null
+				},
+				"gloves" : {
+					"id" : 72,
+					"name" : "Immortal King's Irons",
+					"attrs" : {
+						"strength" : 97,
+						"cold-resist" : 29,
+						"resist-all" : 70,
+						"life-regen" : 317,
+						"critical-hit" : 9.5,
+						"melee-reduce" : 5
+					},
+					"stats" : {
+						"armor" : 343
+					},
+					"icon" : "unique_gloves_008_104_demonhunter_male",
+					"type" : "gloves",
+					"quality" : 7,
+					"_d3id" : "item/CjkIobaahQkSBwgEFVHw6GsdslfV7h07yp5pHdZmipQdDmt__R2Ivr4hHcJqmxEwCTixAUAAUBJgoQMYosHHvg1QAlgAoAH57ZfYAqABwISzoQOgAaLBx74N",
+					"set" : "immortal-kings-legend",
+					"sockets" : null
+				},
+				"shoulders" : {
+					"id" : 73,
+					"name" : "Vile Ward",
+					"attrs" : {
+						"strength" : 284,
+						"vitality" : 31,
+						"resist-all" : 71,
+						"armor" : 261,
+						"life-regen" : 256,
+						"thorns" : 1918
+					},
+					"stats" : {
+						"armor" : 620
+					},
+					"icon" : "unique_shoulder_003_104_demonhunter_male",
+					"type" : "shoulders",
+					"quality" : 6,
+					"_d3id" : "item/CjkI77fO_gQSBwgEFaJwVPEdlfjtlh3kRJQ1HdJdwksdwmqbER0o_n0BHVtOgMkwCTivAUAAUBJgnwMYu73c6gFQAlgA",
+					"sockets" : null
+				},
+				"pants" : {
+					"id" : 74,
+					"name" : "Depth Diggers",
+					"attrs" : {
+						"strength" : 183,
+						"physical-resist" : 28,
+						"resist-all" : 75,
+						"plus-gold-find" : 22
+					},
+					"stats" : {
+						"armor" : 442
+					},
+					"icon" : "unique_pants_006_104_demonhunter_male",
+					"type" : "pants",
+					"quality" : 6,
+					"_d3id" : "item/CocBCM6D194JEgcIBBVl8vYMHVZpUF8dr1PDNh1bToDJHZwuC38d0l3CSx1f8WMEMAk4hgFAAFASYNoCaiUKDAgAENDv3dKBgIDgIRIVCPyQ15gLEgcIBBURn9irMAk4AEABaiUKDAgAENXv3dKBgIDgIRIVCPzRgOMKEgcIBBURn9irMAk4AEABGMrJt88BUAJYAA",
+					"sockets" : [
+						"flawless_star_amethyst",
+						"flawless_star_amethyst"
+					]
+				},
+				"bracers" : {
+					"id" : 75,
+					"name" : "Guardian Slayer",
+					"attrs" : {
+						"strength" : 66,
+						"vitality" : 167,
+						"critical-hit" : 5.5,
+						"health-globes" : 5435
+					},
+					"stats" : {
+						"armor" : 241
+					},
+					"icon" : "bracers_206_demonhunter_male",
+					"type" : "bracers",
+					"quality" : 5,
+					"_d3id" : "item/CkEIsP6nyA0SBwgEFdksyssddh72DR2V-O2WHZwuC38dyNLzZR0i7My4IgsIARVsQgMAGCYgEDAJOPICQABQDmCIBBjNzK7DBlACWAA",
+					"sockets" : null
+				},
+				"mainhand" : {
+					"id" : 76,
+					"name" : "Echoing Fury",
+					"attrs" : {
+						"min-damage" : 279,
+						"max-damage" : 184,
+						"plus-damage" : 40,
+						"strength" : 152,
+						"intelligence" : 180,
+						"plus-aps" : 0.24,
+						"chance-fear" : 11
+					},
+					"stats" : {
+						"dps" : 1071.5040354814528,
+						"damage" : {
+							"min" : 614.5999999999999,
+							"max" : 873.5999999999999
+						},
+						"speed" : 1.4400000476837158
+					},
+					"icon" : "unique_mace_1h_001_104_demonhunter_male",
+					"type" : "mace",
+					"quality" : 6,
+					"_d3id" : "item/ClsI5Za02goSBwgEFQhjE3AdhgJj6h0SXPT8Hb7m3bUd1KFb4B2RqGXGHWSRAaMwCThOQABQEmC1AmohCgwIABDq98-AgYCAwDgSEQgAEgcIBBUelq6YMAk4AEABGJCMm4EOUAJYAA",
+					"sockets" : [
+						"radiant_star_emerald"
+					]
+				},
+				"offhand" : {
+					"id" : 77,
+					"name" : "The Three Hundredth Spear",
+					"attrs" : {
+						"min-damage" : 297,
+						"max-damage" : 364,
+						"plus-damage" : 28,
+						"strength" : 120,
+						"plus-movement" : 12,
+						"melee-reduce" : 3,
+						"bb-weapon-throw-dmg" : 46,
+						"bb-ancient-spear-dmg" : 49
+					},
+					"stats" : {
+						"dps" : 1012.9920402526857,
+						"damage" : {
+							"min" : 610.5600000000001,
+							"max" : 1077.76
+						},
+						"speed" : 1.2000000476837158
+					},
+					"icon" : "unique_spear_002_104_demonhunter_male",
+					"type" : "spear",
+					"quality" : 6,
+					"_d3id" : "item/Cl8I97ChgA0SBwgEFdaPhmcdlL80ih3UZoqUHQrqUAgdnWyzFB3ScDfgHR7l3bUwCTh_QABQEmDPAmolCgwIABC0prjjgICAwAISFQi-247LBRIHCAQVHZaumDANOABAARisv7T4DFACWAA",
+					"sockets" : [
+						"perfect_star_emerald"
+					]
+				},
+				"belt" : {
+					"id" : 78,
+					"name" : "Immortal King's Tribal Binding",
+					"attrs" : {
+						"strength" : 189,
+						"physical-resist" : 60,
+						"resist-all" : 80,
+						"fury-max" : 14,
+						"life-steal" : 3,
+						"bb-weapon-throw" : 5
+					},
+					"stats" : {
+						"armor" : 324
+					},
+					"icon" : "unique_barbbelt_009_104_demonhunter_male",
+					"type" : "mighty-belt",
+					"quality" : 7,
+					"_d3id" : "item/CjkIt-_Zow4SBwgEFSBhFhodWGlQXx11YKbMHYEurikdW06AyR2gbLMUHape7nUwCTifAUAAUBJghwMYwISzoQNQAlgAoAH57ZfYAqABwISzoQOgAaLBx74N",
+					"set" : "immortal-kings-legend",
+					"sockets" : null
+				},
+				"ring2" : {
+					"id" : 79,
+					"name" : "Hellfire Ring",
+					"attrs" : {
+						"strength" : 186,
+						"fire-resist" : 39,
+						"resist-all" : 72,
+						"armor" : 259,
+						"plus-experience-bonus" : 35
+					},
+					"icon" : "unique_ring_024_104_demonhunter_male",
+					"type" : "ring",
+					"quality" : 6,
+					"_d3id" : "item/CjkIqOP7_QYSBwgEFc85RuId0l3CSx1dD-WIHSj-fQEdv4g-Vh1bToDJHaMfp-AwDziIAUAAUBJg3AIY4ZjO2wNQAlgA",
+					"sockets" : null
+				},
+				"ring1" : {
+					"id" : 80,
+					"name" : "Stone of Jordan",
+					"attrs" : {
+						"plus-poison-damage" : 6,
+						"fury-max" : 13,
+						"elite-damage" : 25,
+						"bb-hammer-of-the-ancients" : 5
+					},
+					"icon" : "unique_ring_019_104_demonhunter_male",
+					"type" : "ring",
+					"quality" : 6,
+					"_d3id" : "item/CikIpbHglwkSBwgEFbOLS-Ad7KgfjB1C3nDGHWAo-1QwCTh1QABQEmC9AhiZ0aP7A1ACWAA",
+					"sockets" : null
+				},
+				"amulet" : {
+					"id" : 81,
+					"name" : "Supremacy Desire",
+					"attrs" : {
+						"arcane-resist" : 34,
+						"resist-all" : 46,
+						"critical-hit" : 10
+					},
+					"icon" : "amulet12_demonhunter_male",
+					"type" : "amulet",
+					"quality" : 5,
+					"_d3id" : "item/CjwIhMz0ywISBwgEFavFRGQdWuCBmx208-wHHQ5rf_0dElbV7iILCAEVdkIDABgaIAowCTisAUAAUAxgnAMY1pamxAxQAlgA",
+					"sockets" : null
+				}
+			},
+			"_lastBnetUpdate" : 1369021492,
+			"_lastCrawl" : 1369152827,
+			"actives" : [
+				"weapon-throw~c",
+				"whirlwind~c",
+				"sprint~c",
+				"battle-rage~d",
+				"war-cry~c",
+				"wrath-of-the-berserker~d"
+			],
+			"class" : "barbarian",
+			"crawlCount" : 2,
+			"eliteKills" : 13175,
+			"gender" : 0,
+			"hardcore" : false,
+			"id" : 1,
+			"level" : 60,
+			"name" : "Jesta",
+			"paragon" : 60,
+			"passives" : [
+				"ruthless",
+				"weapons-master",
+				"no-escape"
+			]
+		},
+		"expected": {
+			"strength": 1592,
+			"dexterity": 0,
+			"intelligence": 180,
+			"vitality": 533
+		}
+	}
+]

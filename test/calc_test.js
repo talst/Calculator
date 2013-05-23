@@ -7,13 +7,34 @@ var _ = require("underscore");
 var Calc = require('../main').Calc;
 
 suite("calc.js >", function () {
+
+	function caseDataSuite(suiteName, setupMethod) {
+		var cases = require('./data/' + suiteName);
+		suite(suiteName + '>', function() {
+			_.each(cases, function(testCase) {
+				suite(testCase.name + " >", function() {
+					setup(function() {
+						this.calc = new Calc();
+						setupMethod.call(this, testCase.given);
+					});
+					_.each(testCase.expected, function(expected, attr) {
+						test(attr + " is correct (" + expected + ")", function() {
+							assert.equal(expected, this.calc.attr(attr));
+						});         
+					});
+				});
+			});
+		});
+	}
+	
   test("should know its version", function() {
     expect(Calc.version).to.not.equal(undefined);
-    expect(Calc.version).to.equal('0.0.0');
+    expect(Calc.version).to.equal(require('../package').version);
   });
 	test("Calc is a function", function() {
 		assert.equal(typeof Calc, 'function');
 	});
+	
 	suite("constructor >", function() {
 		setup(function() { 
 			sinon.stub(Calc.prototype, 'setBuild');
@@ -34,9 +55,10 @@ suite("calc.js >", function () {
 			assert.deepEqual(this.calc.attrs, {});
 		});
 	});
+	
 	suite("constructor with data >", function() {
 		setup(function() { 
-			this.testData = require('./data/jesta');
+			this.testData = require('./data/character');
 			sinon.stub(Calc.prototype, 'setBuild', function() {
 				return this;
 			});
@@ -56,6 +78,7 @@ suite("calc.js >", function () {
 				[this.testData]);
 		});
 	});
+	
 	suite("attr >", function() {
 		setup(function() {
 			this.calc = new Calc();
@@ -87,38 +110,39 @@ suite("calc.js >", function () {
 			assert.strictEqual(this.calc.attr("test"), 2);
 		});
 	});
-	suite("calcBase >", function() {
-		var testData = require('./data/calcBase');
+	
+	caseDataSuite("calcBase", function(given) {
+		this.calc.setBuild(given);
+		this.calc.calcBase();
+	});
+	
+	suite("itemClass >", function() {
+		var types = {
+			"generic": ["amulet", "ring", "mojo", "source", "quiver"],
+			"armor": ["belt","boots","bracers","chest","cloak","gloves","helm","pants","mighty-belt","shoulders","spirit-stone","voodoo-mask","wizard-hat"],
+			"weapon": ["2h-mace","2h-axe","bow","daibo","crossbow","2h-mighty","polearm","staff","2h-sword","axe","ceremonial-knife","hand-crossbow","dagger","fist-weapon","mace","mighty-weapon","spear","sword","wand"],	
+			"shield": ["shield"]
+		};
 		setup(function() {
 			this.calc = new Calc();
 		});
-		_.each(testData, function(testCase) {
-			test(testCase.name, function() {
-				this.calc.reset();
-				this.calc.setBuild(testCase.given);
-				this.calc.calcBase();
-				assert.deepEqual(this.calc.attrs, testCase.expected);
+		_.each(types, function(items, type) {
+			_.each(items, function(item) {
+				test("Correct Item Class: " + item, function() {
+					assert.equal(type, this.calc.itemClass(item));
+				});
 			});
 		});
 	});
-	suite("setBuild >", function() {
-		setup(function() { 
-			this.testData = require('./data/jesta');
-			this.calc = new Calc();
-			this.chainable = this.calc.setBuild(this.testData);
-		});
-		test("chainable", function() {
-			assert.strictEqual(this.chainable, this.calc);
-		});
-		test("build was cloned", function() {
-			assert.notStrictEqual(this.calc.build, this.testData);
-		});
-		test("build was deep cloned", function() {
-			assert.notStrictEqual(this.calc.build.gear, this.testData.gear);
-		});
-		test("build data matches", function() {
-			assert.deepEqual(this.calc.build, this.testData);
-		});
+	
+	caseDataSuite("parseItem", function(given) {
+		this.calc.setBuild(given);
+		this.calc.parseItem("helm", given.gear.helm);
+	});
+	
+	caseDataSuite("parseItems", function(given) {
+		this.calc.setBuild(given);
+		this.calc.parseItems();
 	});
 	
 	suite("reset >", function() {
@@ -142,13 +166,18 @@ suite("calc.js >", function () {
 	
 	suite("run >", function() {
 		setup(function() { 
-			this.testData = require('./data/jesta');
+			this.testData = require('./data/character');
 			this.calc = new Calc();
 			sinon.stub(this.calc, 'calcBase');
 			sinon.stub(this.calc, 'parseItems');
 			sinon.stub(this.calc, 'reset');
 			this.calc.setBuild(this.testData);
 			this.calc.run();
+		});
+		teardown(function() {
+			this.calc.calcBase.restore();
+			this.calc.parseItems.restore();
+			this.calc.reset.restore();
 		});
 		test("calls parseItems", function() {
 			assert.ok(this.calc.parseItems.called);
@@ -163,13 +192,25 @@ suite("calc.js >", function () {
 			assert.ok(this.calc.reset.calledBefore(this.calc.calcBase));
 		});
 	});
-	suite("parseItems >", function() {
+	
+	suite("setBuild >", function() {
 		setup(function() { 
-			this.testData = require('./data/jesta');
-			this.calc = new Calc(this.testData);
+			this.testData = require('./data/character');
+			this.calc = new Calc();
+			this.chainable = this.calc.setBuild(this.testData);
 		});
-		test("", function() {
-			
+		test("chainable", function() {
+			assert.strictEqual(this.chainable, this.calc);
+		});
+		test("build was cloned", function() {
+			assert.notStrictEqual(this.calc.build, this.testData);
+		});
+		test("build was deep cloned", function() {
+			assert.notStrictEqual(this.calc.build.gear, this.testData.gear);
+		});
+		test("build data matches", function() {
+			assert.deepEqual(this.calc.build, this.testData);
 		});
 	});
+	
 });

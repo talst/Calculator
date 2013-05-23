@@ -1,0 +1,41 @@
+[
+	{
+		"name": "Basic Item (Helm)",
+		"given": {
+			"class": "monk",
+			"level": 1,
+			"gear" : {
+				"helm": {
+					"attrs": {
+						"strength" : 10,
+						"vitality" : 10					
+					}						
+				}
+			}
+		},
+		"expected": { 
+			"strength": 10,
+		  "vitality": 10
+		}
+	},
+	{
+		"name": "Doesn't duplicate armor value",
+		"given": {
+			"class": "monk",
+			"level": 1,
+			"gear" : {
+				"helm": {
+					"stats": {
+						"armor": 10
+					},
+					"attrs": {
+						"armor": 10
+					}						
+				}
+			}
+		},
+		"expected": { 
+			"armor": 10
+		}
+	}
+]

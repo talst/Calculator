@@ -6,6 +6,8 @@
 			"class": "demon-hunter"
 		},
 		"expected": {
+			"critical-hit": 5, 
+			"critical-hit-damage": 50,
 			"strength": 8,
 			"dexterity": 10,
 			"intelligence": 8,
@@ -19,6 +21,8 @@
 			"class": "monk"
 		},
 		"expected": {
+			"critical-hit": 5, 
+			"critical-hit-damage": 50,
 			"strength": 67,
 			"dexterity": 187,
 			"intelligence": 67,
@@ -33,6 +37,8 @@
 			"class": "wizard"
 		},
 		"expected": {
+			"critical-hit": 5, 
+			"critical-hit-damage": 50,
 			"strength": 68,
 			"intelligence": 190,
 			"dexterity": 68,

@@ -1,0 +1,44 @@
+[
+	{
+		"name": "Level 1 Demon Hunter",
+		"given": {
+			"level": 1,
+			"class": "demon-hunter"
+		},
+		"expected": {
+			"strength": 8,
+			"dexterity": 10,
+			"intelligence": 8,
+			"vitality": 9
+		}
+	},
+	{
+		"name": "Level 60 Monk",
+		"given": {
+			"level": 60,
+			"class": "monk"
+		},
+		"expected": {
+			"strength": 67,
+			"dexterity": 187,
+			"intelligence": 67,
+			"vitality": 127
+		}
+	},
+	{
+		"name": "Level 60 Paragon 1 Wizard",
+		"given": {
+			"level": 60,
+			"paragon": 1,
+			"class": "wizard"
+		},
+		"expected": {
+			"strength": 68,
+			"intelligence": 190,
+			"dexterity": 68,
+			"vitality": 129,
+			"plus-magic-find": 3,
+			"plus-gold-find": 3
+		}
+	}
+]

@@ -1,1 +1,1 @@
-module.exports = require('./lib/d3up-calc.js');
+module.exports = require('./lib/calc.js');

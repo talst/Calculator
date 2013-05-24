@@ -153,6 +153,30 @@ suite("calc.js >", function () {
 		}, this);
 	});
 	
+	suite("parseSkills >", function() {
+		var data = false;
+		var testData = require('./data/character');
+		var calc = new Calc(testData);
+
+		test("has gamedata", function() {
+			assert.equal('object', typeof calc.gamedata);
+		});
+		suite("active skills >", function() {
+			_.each(calc.actives, function(data, skill) {
+				test(skill + " is object", function() {
+					assert.equal('object', typeof data);
+				});
+			});			
+		});
+		suite("passive skills >", function() {
+			_.each(calc.passives, function(data, skill) {
+				test(skill + " is object", function() {
+					assert.equal('object', typeof data);
+				});
+			});			
+		});
+	});
+	
 	caseDataSuite("parseItems", function(given) {
 		this.calc.setBuild(given);
 		this.calc.parseItems();
@@ -183,6 +207,7 @@ suite("calc.js >", function () {
 			this.calc = new Calc();
 			sinon.stub(this.calc, 'calcBase');
 			sinon.stub(this.calc, 'parseItems');
+			sinon.stub(this.calc, 'parseSkills');
 			sinon.stub(this.calc, 'reset');
 			this.calc.setBuild(this.testData);
 			this.calc.run();
@@ -194,6 +219,9 @@ suite("calc.js >", function () {
 		});
 		test("calls parseItems", function() {
 			assert.ok(this.calc.parseItems.called);
+		});
+		test("calls parseSkills", function() {
+			assert.ok(this.calc.parseSkills.called);
 		});
 		test("calls reset", function() {
 			assert.ok(this.calc.reset.called);

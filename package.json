@@ -3,8 +3,11 @@
   "version": "0.0.1",
   "description": "Diablo 3 Build Calculator",
   "main": "main.js",
+  "engines": {
+    "node": ">=0.6"
+  },
   "scripts": {
-    "test": "test"
+		"test": "grunt travis --verbose"
   },
   "repository": {
     "type": "git",

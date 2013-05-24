@@ -10,7 +10,7 @@ suite("calc.js >", function () {
 
 	function caseDataSuite(suiteName, setupMethod) {
 		var cases = require('./data/' + suiteName);
-		suite(suiteName + '>', function() {
+		suite(suiteName + ' >', function() {
 			_.each(cases, function(testCase) {
 				suite(testCase.name + " >", function() {
 					setup(function() {
@@ -19,7 +19,7 @@ suite("calc.js >", function () {
 					});
 					_.each(testCase.expected, function(expected, attr) {
 						test(attr + " is correct (" + expected + ")", function() {
-							assert.equal(expected, this.calc.attr(attr));
+							assert.deepEqual(expected, this.calc.attr(attr));
 						});         
 					});
 				});
@@ -135,9 +135,22 @@ suite("calc.js >", function () {
 		});
 	});
 	
+	suite("itemRules >", function() {
+		setup(function() {
+			this.calc = new Calc();
+		});
+		_.each(['generic', 'weapon', 'shield', 'armor'], function(type) {
+			test("Retrieved Item Rule: " + type, function() {
+				assert.equal('object', typeof this.calc.itemRules(type));
+			});
+		});
+	});
+	
 	caseDataSuite("parseItem", function(given) {
 		this.calc.setBuild(given);
-		this.calc.parseItem("helm", given.gear.helm);
+		_.each(given.gear, function(item, type) {
+			this.calc.parseItem(type, given.gear[type]);			
+		}, this);
 	});
 	
 	caseDataSuite("parseItems", function(given) {

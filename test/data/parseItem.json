@@ -6,6 +6,7 @@
 			"level": 1,
 			"gear" : {
 				"helm": {
+					"type": "helm",
 					"attrs": {
 						"strength" : 10,
 						"vitality" : 10					
@@ -25,6 +26,7 @@
 			"level": 1,
 			"gear" : {
 				"helm": {
+					"type": "helm",
 					"stats": {
 						"armor": 10
 					},
@@ -37,5 +39,67 @@
 		"expected": { 
 			"armor": 10
 		}
+	},
+	{
+		"name": "Ignores excess damage values on weapons", 
+		"given": {
+			"class": "warrior",
+			"level": 1,
+			"gear" : {
+				"mainhand": {
+					"type": "2h-mighty",
+					"stats": {
+						"damage": {
+							"min": 10,
+							"max": 20
+						}, 
+						"speed": 0.9
+					},
+					"attrs": {
+						"min-damage" : 297,
+						"max-damage" : 364,
+						"plus-damage" : 28,
+						"attack-speed": 0.30
+					}						
+				}
+			}
+		},
+		"expected": {
+			"damage": {
+				"min": 10,
+				"max": 20
+			},
+			"speed": 0.9
+		}
+	},
+	{
+		"name": "Ignores extra block values on shields", 
+		"given": {
+			"class": "warrior",
+			"level": 1,
+			"gear" : {
+				"offhand": {
+					"type": "shield",
+					"stats": {
+						"block-amount": {
+							"min": 10,
+							"max": 20
+						}, 
+						"block-chance": 15
+					},
+					"attrs": {
+						"plus-block" : 3
+					}						
+				}
+			}
+		},
+		"expected": {
+			"block-amount": {
+				"min": 10,
+				"max": 20
+			},
+			"block-chance": 15
+		}
 	}
+	
 ]

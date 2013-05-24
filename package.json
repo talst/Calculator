@@ -7,7 +7,7 @@
     "node": ">=0.10"
   },
   "scripts": {
-		"test": "grunt travis --verbose"
+		"test": "grunt travis"
   },
   "repository": {
     "type": "git",

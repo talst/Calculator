@@ -4,7 +4,7 @@
   "description": "Diablo 3 Build Calculator",
   "main": "main.js",
   "engines": {
-    "node": ">=0.6"
+    "node": ">=0.10"
   },
   "scripts": {
 		"test": "grunt travis --verbose"

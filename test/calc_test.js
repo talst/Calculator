@@ -195,7 +195,6 @@ suite("calc.js >", function () {
 						modHero.passives[skill] = gamedata.passives[heroClass][skill];
 						calc.setBuild(hero);
 						calc.run();
-						console.log(modHero, expect);
 						_.each(expect, function(value, attr) {
 							test("Checking: " + attr, function() {
 								assert.equal(value, calc.attr(attr));

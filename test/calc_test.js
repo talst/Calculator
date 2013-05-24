@@ -154,9 +154,11 @@ suite("calc.js >", function () {
 	});
 	
 	suite("parseSkills >", function() {
+		var modHero;
 		var data = false;
 		var testData = require('./data/character');
 		var calc = new Calc(testData);
+		var gamedata = calc.gamedata;
 
 		test("has gamedata", function() {
 			assert.equal('object', typeof calc.gamedata);
@@ -174,6 +176,34 @@ suite("calc.js >", function () {
 					assert.equal('object', typeof data);
 				});
 			});			
+		});
+		_.each(['barbarian', 'demon-hunter', 'monk', 'witch-doctor', 'wizard'], function(heroClass) {
+			suite("checking skill math for " + heroClass, function() {
+				var hero = require("./data/class/barbarian"),
+						passives = gamedata.passives[heroClass],
+						expects = require("./data/skills/passives");
+				setup(function() {
+					sinon.stub(calc, 'parseSkills');					
+				});
+				teardown(function() {
+					calc.parseSkills.restore();
+				});
+				_.each(expects[heroClass], function(expect, skill) {
+					suite("passive: " + skill, function() {
+						modHero = _.clone(hero);
+						modHero.passives = {};
+						modHero.passives[skill] = gamedata.passives[heroClass][skill];
+						calc.setBuild(hero);
+						calc.run();
+						console.log(modHero, expect);
+						_.each(expect, function(value, attr) {
+							test("Checking: " + attr, function() {
+								assert.equal(value, calc.attr(attr));
+							});
+						});
+					});
+				}, this);
+			}, this);
 		});
 	});
 	

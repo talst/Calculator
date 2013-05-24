@@ -272,14 +272,6 @@
 			},
 			"_lastBnetUpdate" : 1369021492,
 			"_lastCrawl" : 1369152827,
-			"actives" : [
-				"weapon-throw~c",
-				"whirlwind~c",
-				"sprint~c",
-				"battle-rage~d",
-				"war-cry~c",
-				"wrath-of-the-berserker~d"
-			],
 			"class" : "barbarian",
 			"crawlCount" : 2,
 			"eliteKills" : 13175,
@@ -288,12 +280,7 @@
 			"id" : 1,
 			"level" : 60,
 			"name" : "Jesta",
-			"paragon" : 60,
-			"passives" : [
-				"ruthless",
-				"weapons-master",
-				"no-escape"
-			]
+			"paragon" : 60
 		},
 		"expected": {
 			"strength": 1592,

@@ -1,0 +1,12 @@
+{
+	"barbarian": {
+		"ruthless": {
+			"critical-hit": 39.5,
+			"critical-hit-damage": 100
+		},
+		"ruthless": {
+			"critical-hit": 39.5,
+			"critical-hit-damage": 100
+		}
+	}
+}

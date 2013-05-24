@@ -1,0 +1,17 @@
+[
+	{
+		"name": "ruthless",
+		"given": {
+			"class" : "barbarian",
+			"level" : 60,
+			"paragon" : 60,
+			"passives" : [
+				"ruthless"
+			]
+		},
+		"expected": {
+			"critical-hit": 10,
+			"critical-hit-damage": 100
+		}
+	}
+]

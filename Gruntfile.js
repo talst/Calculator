@@ -58,15 +58,17 @@ module.exports = function(grunt) {
 			}
 	  }
   });
-	console.log(process.env);
-	grunt.loadNpmTasks('grunt-notify');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.task.run('notify_hooks');
+
+	if(!process.env.TRAVIS_NODE_VERSION) {
+		grunt.loadNpmTasks('grunt-notify');
+	  grunt.loadNpmTasks('grunt-contrib-watch');
+		grunt.task.run('notify_hooks');		
+	}
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-simple-mocha');
 	
   grunt.registerTask('default', ['jshint', 'simplemocha']);
 	// Travis CI task.
-  grunt.registerTask('travis', 'jshint simplemocha');
+  grunt.registerTask('travis', ['jshint', 'simplemocha']);
 };

@@ -1,17 +1,26 @@
 {
 	"barbarian": {
 		"weapons-master": {
-			"critical-hit": 34.5,
-			"critical-hit-damage": 50
+			"critical-hit": 44.5
 		},
 		"ruthless": {
 			"critical-hit": 39.5,
 			"critical-hit-damage": 100
 		},
 		"bloodthirst": {
-			"life-steal": 3,
-			"critical-hit": 34.5,
-			"critical-hit-damage": 50
+			"life-steal": 6
+		},
+		"nerves-of-steel": {
+			"armor": 4141
+		},
+		"berserker-rage": {
+			"plus-damage": 25
+		},
+		"inspiring-presence": {
+			"life-regen": 768.06
+		},
+		"animosity": {
+			"max-fury": 120
 		}
 	}
 }

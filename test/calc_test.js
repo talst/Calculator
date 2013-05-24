@@ -179,38 +179,19 @@ suite("calc.js >", function () {
 	
 	suite("testing skill data", function() {
 		_.each(['barbarian', 'demon-hunter', 'monk', 'witch-doctor', 'wizard'], function(heroClass) {
-			suite("checking skill math for " + heroClass, function() {
-				
-				setup(function() {
-					this.gamedata = this.calc.gamedata;
-				});
-
-				
+			suite("skill math for " + heroClass, function() {
 				var expects = require("./data/skills/passives");
 				_.each(expects[heroClass], function(expects, skill) {
-
 					suite("passive: " + skill, function() {
-						var hero = require("./data/class/barbarian");
-
-						setup(function() {
-							this.hero = _.cloneDeep(hero);
-							this.calc = new Calc(this.hero);
-							sinon.stub(this.calc, 'parseSkills');					
-						});
-						
-						teardown(function() {
-							this.calc.reset();
-							this.calc.parseSkills.restore();
-						});
-
 						_.each(expects, function(value, attr) {
 							test("Checking: " + attr, function() {
-								this.calc.passives = {};
-								this.calc.passives[skill] = this.gamedata.passives[heroClass][skill];
-								assert.equal(value, this.calc.attr(attr));
-							});
+								var hero = require("./data/class/barbarian");
+								var calc = new Calc(hero);
+								calc.passives[skill] = calc.gamedata.passives[heroClass][skill];
+								calc.activateSkills();
+								assert.equal(value, calc.attr(attr));
+							});	
 						}, this);
-						
 					});
 				}, this);
 			}, this);
@@ -220,6 +201,52 @@ suite("calc.js >", function () {
 	caseDataSuite("parseItems", function(given) {
 		this.calc.setBuild(given);
 		this.calc.parseItems();
+	});
+
+	suite("processEffect >", function() {
+		setup(function() {
+			this.sampleSwitch = {
+				"lookup": "type",
+				"against": "test",
+				"cases": [
+					{
+						"caseOf": "helm",
+						"effect": {
+							"critical-hit": 25
+						}
+					},
+					{
+						"caseOf": "chest",
+						"effect": {
+							"critical-hit-damage": 50
+						}
+					}
+				]
+			};
+			testData = require('./data/character');
+			this.calc = new Calc();
+			this.calc.setBuild(testData);
+			this.calc.calcBase();
+		});
+		teardown(function() {
+			this.calc.reset();
+		});
+		test("switch [case 1]", function() {
+			this.calc.build.gear['test'] = {
+				type: "helm"
+			};
+			this.calc.processEffect("switch", this.sampleSwitch);
+			assert.equal(30, this.calc.attr("critical-hit"));
+			assert.equal(50, this.calc.attr("critical-hit-damage"));			
+		});
+		test("switch [case 2]", function() {
+			this.calc.build.gear['test'] = {
+				type: "chest"
+			};
+			this.calc.processEffect("switch", this.sampleSwitch);
+			assert.equal(5, this.calc.attr("critical-hit"));			
+			assert.equal(100, this.calc.attr("critical-hit-damage"));			
+		});
 	});
 	
 	suite("reset >", function() {

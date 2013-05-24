@@ -2,7 +2,7 @@ var mocha  = require('mocha');
 var expect = require('chai').expect;
 var assert = require("assert");
 var sinon = require("sinon");
-var _ = require("underscore");
+var _ = require("lodash");
 
 var Calc = require('../main').Calc;
 

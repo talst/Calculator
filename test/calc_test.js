@@ -154,11 +154,9 @@ suite("calc.js >", function () {
 	});
 	
 	suite("parseSkills >", function() {
-		var modHero;
 		var data = false;
 		var testData = require('./data/character');
 		var calc = new Calc(testData);
-		var gamedata = calc.gamedata;
 
 		test("has gamedata", function() {
 			assert.equal('object', typeof calc.gamedata);
@@ -177,35 +175,48 @@ suite("calc.js >", function () {
 				});
 			});			
 		});
+	});
+	
+	suite("testing skill data", function() {
 		_.each(['barbarian', 'demon-hunter', 'monk', 'witch-doctor', 'wizard'], function(heroClass) {
 			suite("checking skill math for " + heroClass, function() {
-				var hero = require("./data/class/barbarian"),
-						passives = gamedata.passives[heroClass],
-						expects = require("./data/skills/passives");
+				
 				setup(function() {
-					sinon.stub(calc, 'parseSkills');					
+					this.gamedata = this.calc.gamedata;
 				});
-				teardown(function() {
-					calc.parseSkills.restore();
-				});
-				_.each(expects[heroClass], function(expect, skill) {
+
+				
+				var expects = require("./data/skills/passives");
+				_.each(expects[heroClass], function(expects, skill) {
+
 					suite("passive: " + skill, function() {
-						modHero = _.clone(hero);
-						modHero.passives = {};
-						modHero.passives[skill] = gamedata.passives[heroClass][skill];
-						calc.setBuild(hero);
-						calc.run();
-						_.each(expect, function(value, attr) {
-							test("Checking: " + attr, function() {
-								assert.equal(value, calc.attr(attr));
-							});
+						var hero = require("./data/class/barbarian");
+
+						setup(function() {
+							this.hero = _.cloneDeep(hero);
+							this.calc = new Calc(this.hero);
+							sinon.stub(this.calc, 'parseSkills');					
 						});
+						
+						teardown(function() {
+							this.calc.reset();
+							this.calc.parseSkills.restore();
+						});
+
+						_.each(expects, function(value, attr) {
+							test("Checking: " + attr, function() {
+								this.calc.passives = {};
+								this.calc.passives[skill] = this.gamedata.passives[heroClass][skill];
+								assert.equal(value, this.calc.attr(attr));
+							});
+						}, this);
+						
 					});
 				}, this);
 			}, this);
 		});
 	});
-	
+
 	caseDataSuite("parseItems", function(given) {
 		this.calc.setBuild(given);
 		this.calc.parseItems();

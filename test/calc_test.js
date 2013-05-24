@@ -231,21 +231,92 @@ suite("calc.js >", function () {
 		teardown(function() {
 			this.calc.reset();
 		});
-		test("switch [case 1]", function() {
-			this.calc.build.gear['test'] = {
-				type: "helm"
-			};
-			this.calc.processEffect("switch", this.sampleSwitch);
-			assert.equal(30, this.calc.attr("critical-hit"));
-			assert.equal(50, this.calc.attr("critical-hit-damage"));			
+		test("activate", function() {
+			this.calc.processEffect("activate", {
+				'strength': 10
+			});
+			assert(377, this.calc.attr("strength"));
 		});
-		test("switch [case 2]", function() {
-			this.calc.build.gear['test'] = {
-				type: "chest"
+		suite("percent", function() {
+			test("increases strength and vitality", function() {
+				this.calc.processEffect("percent", {
+					'strength': 10,
+					'vitality': 10
+				});
+				assert.equal(403.7, this.calc.attr("strength"));
+				assert.equal(271.7, this.calc.attr("vitality"));
+			});
+			test("doesn't cause a stat to set to zero", function() {
+				this.calc.processEffect("percent", {
+					'strength': 0
+				});
+				assert.notEqual(0, this.calc.attr("strength"));
+			});
+			test("is fine when that stat doesn't exist", function() {
+				this.calc.reset();
+				this.calc.processEffect("percent", {
+					'strength': 0
+				});
+			});
+		});
+		suite("convert", function() {
+			var effect = {
+				"from": "strength",
+				"to": "vitality",
+				"ratio": 0.5
 			};
-			this.calc.processEffect("switch", this.sampleSwitch);
-			assert.equal(5, this.calc.attr("critical-hit"));			
-			assert.equal(100, this.calc.attr("critical-hit-damage"));			
+			test("empty objects won't create 'undefined' stats", function() {
+				this.calc.processEffect("convert", {});
+				assert.equal('undefined', typeof this.calc.attrs['undefined']);
+			});
+			test("works if 'to' isn't present", function() {
+				delete this.calc.attrs.vitality;
+				this.calc.processEffect("convert", effect);
+				assert.equal(183.5, this.calc.attr("vitality"));
+			});
+			test("doesn't add if 'from' isn't present", function() {
+				delete this.calc.attrs.strength;
+				this.calc.processEffect("convert", effect);
+				assert.equal(247, this.calc.attr("vitality"));
+			});
+			test("converts strength to vitality", function() {
+				this.calc.processEffect("convert", effect);
+				assert.equal(430.5, this.calc.attr("vitality"));
+			});
+		});
+		suite("switching", function() {
+			test("doesn't crash when item doesn't exist", function() {
+				delete this.calc.build.gear['test'];
+				this.calc.processEffect("switch", this.sampleSwitch);
+				assert.equal(5, this.calc.attr("critical-hit"));
+				assert.equal(50, this.calc.attr("critical-hit-damage"));			
+			});
+			test("doesn't apply when item type isn't matched", function() {
+				this.calc.build.gear['test'] = {
+					type: "not matching"
+				};
+				this.calc.processEffect("switch", this.sampleSwitch);
+				assert.equal(5, this.calc.attr("critical-hit"));
+				assert.equal(50, this.calc.attr("critical-hit-damage"));			
+
+			});
+			test("switch [case 1]", function() {
+				this.calc.build.gear['test'] = {
+					type: "helm"
+				};
+				this.calc.processEffect("switch", this.sampleSwitch);
+				assert.equal(30, this.calc.attr("critical-hit"));
+				assert.equal(50, this.calc.attr("critical-hit-damage"));			
+			});
+			test("switch [case 2]", function() {
+				this.calc.build.gear['test'] = {
+					type: "chest"
+				};
+				this.calc.processEffect("switch", this.sampleSwitch);
+				assert.equal(5, this.calc.attr("critical-hit"));			
+				assert.equal(100, this.calc.attr("critical-hit-damage"));			
+			});
+
 		});
 	});
 	

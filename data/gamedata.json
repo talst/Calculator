@@ -71,7 +71,7 @@
 			"inspiring-presence": {
 				"desc": "The duration of your shouts is doubled. After using a shout you regenerate <span class='skill-highlight'>2%</span> of your maximum Life per second for <span class='skill-highlight'>60</span> seconds.",
 				"effect": {
-					"plus-percent" : {
+					"percent" : {
 						"life-regen": 2
 					}
 				}
@@ -97,8 +97,10 @@
 			"tough-as-nails": {
 				"desc": "Increases Armor by <span class='skill-highlight'>25%</span>.<br />Thorns damage dealt increased by <span class='skill-highlight'>50%</span>.",
 				"effect": {
-					"plus-armor": 25,
-					"plus-thorns": 50
+					"percent": {
+						"armor": 25,
+						"thorns": 50						
+					}
 				}
 			},
 			"no-escape": {

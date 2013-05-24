@@ -21,6 +21,10 @@
 		},
 		"animosity": {
 			"max-fury": 120
+		}, 
+		"tough-as-nails": {
+			"armor": 4201.25,
+			"thorns": 2877
 		}
 	}
 }

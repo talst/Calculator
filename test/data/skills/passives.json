@@ -1,12 +1,17 @@
 {
 	"barbarian": {
-		"ruthless": {
-			"critical-hit": 39.5,
-			"critical-hit-damage": 100
+		"weapons-master": {
+			"critical-hit": 34.5,
+			"critical-hit-damage": 50
 		},
 		"ruthless": {
 			"critical-hit": 39.5,
 			"critical-hit-damage": 100
+		},
+		"bloodthirst": {
+			"life-steal": 3,
+			"critical-hit": 34.5,
+			"critical-hit-damage": 50
 		}
 	}
 }

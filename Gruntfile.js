@@ -9,10 +9,10 @@ module.exports = function(grunt) {
 		watch: {
 		  scripts: {
 		    files: [
-					'data/*.json',
-					'lib/*.js',
-					'test/*.js',
-					'test/data/*.json',
+					'data/**/*.json',
+					'lib/**/*.js',
+					'test/**/*.js',
+					'test/data/**/*.json',
 					'Gruntfile.js'
 				],
 		    tasks: ['default']

@@ -11,6 +11,7 @@ module.exports = function(grunt) {
 		    files: [
 					'data/**/*.json',
 					'lib/**/*.js',
+					'lib/math/**/*.js',
 					'test/**/*.js',
 					'test/data/**/*.json',
 					'Gruntfile.js'

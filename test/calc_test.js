@@ -115,6 +115,31 @@ suite("calc.js >", function () {
 		this.calc.setBuild(given);
 		this.calc.calcBase();
 	});
+
+	suite("getStats >", function() {
+		setup(function() {
+			var testData = require('./data/getStats');
+			this.calc = new Calc(testData);
+		});
+		test("chainable", function() {
+			this.chainable = this.calc.reset();
+			assert.strictEqual(this.chainable, this.calc);
+		});
+		test("returns object", function() {
+			console.log(this.calc.getStats());
+			assert.equal('object', typeof this.calc.getStats());
+		});
+		suite("math >", function() {
+			test("math lib exists", function() {
+				assert.equal('object', typeof Calc.math);
+			});
+			suite("dps", function() {
+				test("dps exists", function() {
+					assert.equal('function', typeof Calc.math.dps);
+				});
+			});
+		});
+	});
 	
 	suite("itemClass >", function() {
 		var types = {

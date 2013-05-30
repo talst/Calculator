@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<script src="../node_modules/lodash/lodash.js"></script>
+		<script src="../lib/calc.js" type="text/javascript"></script>
+	</head>
+	<script type="text/javascript">
+		(function() {
+			var calc = new window.d3up.Calc({
+				"class": "monk",
+				"level": 1,
+				"gear" : {
+					"helm": {
+						"type": "helm",
+						"attrs": {
+							"strength" : 10,
+							"vitality" : 10					
+						}						
+					}
+				}
+			});
+			console.log(calc.attr("vitality"));
+		})();
+	</script>
+</html>

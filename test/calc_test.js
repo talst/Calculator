@@ -126,7 +126,6 @@ suite("calc.js >", function () {
 			assert.strictEqual(this.chainable, this.calc);
 		});
 		test("returns object", function() {
-			console.log(this.calc.getStats());
 			assert.equal('object', typeof this.calc.getStats());
 		});
 		suite("math >", function() {
@@ -136,6 +135,14 @@ suite("calc.js >", function () {
 			suite("dps", function() {
 				test("dps exists", function() {
 					assert.equal('function', typeof Calc.math.dps);
+				});
+			});
+			suite("stats", function() {
+				test("life exists", function() {
+					assert.equal('function', typeof Calc.math.life);
+				});
+				test("armor exists", function() {
+					assert.equal("function", typeof Calc.math.armor);
 				});
 			});
 		});
@@ -182,9 +189,10 @@ suite("calc.js >", function () {
 		var data = false;
 		var testData = require('./data/character');
 		var calc = new Calc(testData);
+		var gamedata = require("../data/gamedata.json");
 
 		test("has gamedata", function() {
-			assert.equal('object', typeof calc.gamedata);
+			assert.equal('object', typeof gamedata);
 		});
 		suite("active skills >", function() {
 			_.each(calc.actives, function(data, skill) {
@@ -203,16 +211,17 @@ suite("calc.js >", function () {
 	});
 	
 	suite("testing skill data", function() {
+		var expects = require("./data/skills/passives"),
+			gamedata = require("../data/gamedata.json");
 		_.each(['barbarian', 'demon-hunter', 'monk', 'witch-doctor', 'wizard'], function(heroClass) {
 			suite("skill math for " + heroClass, function() {
-				var expects = require("./data/skills/passives");
 				_.each(expects[heroClass], function(expects, skill) {
 					suite("passive: " + skill, function() {
 						_.each(expects, function(value, attr) {
 							test("Checking: " + attr, function() {
-								var hero = require("./data/class/barbarian");
+								var hero = require("./data/class/" + heroClass);
 								var calc = new Calc(hero);
-								calc.passives[skill] = calc.gamedata.passives[heroClass][skill];
+								calc.passives[skill] = gamedata.passives[heroClass][skill];
 								calc.activateSkills();
 								assert.equal(value, calc.attr(attr));
 							});	
@@ -355,6 +364,19 @@ suite("calc.js >", function () {
 		});
 		test("creates attrs", function() {
 			assert.ok(this.calc.attrs);
+			assert.deepEqual({}, this.calc.attrs);
+		});
+		test("creates actives", function() {
+			assert.ok(this.calc.actives);
+			assert.deepEqual({}, this.calc.actives);
+		});
+		test("creates passives", function() {
+			assert.ok(this.calc.passives);
+			assert.deepEqual({}, this.calc.passives);
+		});
+		test("creates sets", function() {
+			assert.ok(this.calc.sets);
+			assert.deepEqual({}, this.calc.sets);
 		});
 		test("overwrites attrs", function() {
 			var attrs = this.calc.attrs;
@@ -368,9 +390,11 @@ suite("calc.js >", function () {
 		setup(function() { 
 			this.testData = require('./data/character');
 			this.calc = new Calc();
+			sinon.stub(this.calc, 'activateSkills');
 			sinon.stub(this.calc, 'calcBase');
 			sinon.stub(this.calc, 'parseItems');
 			sinon.stub(this.calc, 'parseSkills');
+			sinon.stub(this.calc, 'parseSetBonuses');
 			sinon.stub(this.calc, 'reset');
 			this.calc.setBuild(this.testData);
 			this.calc.run();
@@ -378,7 +402,16 @@ suite("calc.js >", function () {
 		teardown(function() {
 			this.calc.calcBase.restore();
 			this.calc.parseItems.restore();
+			this.calc.parseSkills.restore();
+			this.calc.parseSetBonuses.restore();
+			this.calc.activateSkills.restore();
 			this.calc.reset.restore();
+		});
+		test("calls activateSkills", function() {
+			assert.ok(this.calc.activateSkills.called);
+		});
+		test("calls calcBase", function() {
+			assert.ok(this.calc.calcBase.called);
 		});
 		test("calls parseItems", function() {
 			assert.ok(this.calc.parseItems.called);
@@ -386,11 +419,11 @@ suite("calc.js >", function () {
 		test("calls parseSkills", function() {
 			assert.ok(this.calc.parseSkills.called);
 		});
+		test("calls parseSetBonuses", function() {
+			assert.ok(this.calc.parseSetBonuses.called);
+		});
 		test("calls reset", function() {
 			assert.ok(this.calc.reset.called);
-		});
-		test("calls calcBase", function() {
-			assert.ok(this.calc.calcBase.called);
 		});
 		test("calls reset before calcBase", function() {
 			assert.ok(this.calc.reset.calledBefore(this.calc.calcBase));

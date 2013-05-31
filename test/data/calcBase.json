@@ -1,5 +1,19 @@
 [
 	{
+		"name": "Empty Build",
+		"given": {
+			"class": "demon-hunter"
+		}, 
+		"expected": {
+			"critical-hit": 5, 
+			"critical-hit-damage": 50,
+			"strength": 8,
+			"dexterity": 10,
+			"intelligence": 8,
+			"vitality": 9
+		}
+	},
+	{
 		"name": "Level 1 Demon Hunter",
 		"given": {
 			"level": 1,
@@ -46,5 +60,23 @@
 			"plus-magic-find": 3,
 			"plus-gold-find": 3
 		}
-	}
+	},
+	{
+		"name": "Level 60 Paragon 93 Wizard",
+		"given": {
+			"level": 60,
+			"paragon": 93,
+			"class": "wizard"
+		},
+		"expected": {
+			"critical-hit": 5, 
+			"critical-hit-damage": 50,
+			"strength": 160,
+			"intelligence": 466,
+			"dexterity": 160,
+			"vitality": 313,
+			"plus-magic-find": 279,
+			"plus-gold-find": 279
+		}
+	}	
 ]

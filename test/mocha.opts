@@ -1,2 +1,2 @@
 --ui tdd
---reporter spec
+--reporter html-cov

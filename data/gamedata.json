@@ -237,9 +237,11 @@
 			"glass-cannon": {
 				"desc": "Increases all damage done by <span class='skill-highlight'>15%</span>, but decreases Armor and resistances by <span class='skill-highlight'>10%</span>.",
 				"effect": {
-					"plus-damage": 15,
-					"plus-resist-all": -10,
-					"plus-armor": -10
+					"percent": {
+						"plus-damage": 15,
+						"resist-all": -10,
+						"armor": -10						
+					}
 				}
 			},
 			"prodigy": {

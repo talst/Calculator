@@ -1,0 +1,466 @@
+{
+	"_authentic" : true,
+	"_characterBt" : "silverd#2963",
+	"_characterId" : "52503",
+	"_characterRg" : "2",
+	"_created" : 1369950462,
+	"gear" : {
+		"helm" : {
+			"id" : 132,
+			"name" : "Soul Rending Cover",
+			"attrs" : {
+				"strength" : 80,
+				"intelligence" : 153,
+				"resist-all" : 55,
+				"ap-max" : 11,
+				"critical-hit" : 5.5
+			},
+			"stats" : {
+				"armor" : 346
+			},
+			"icon" : "wizardhat_203_wizard_female",
+			"type" : "wizard-hat",
+			"quality" : 5,
+			"_d3id" : "item/CmoIlPnW-wUSBwgEFYKxpGgdEWyFzR0RXPT8HSkSc-Addh72DR2UvzSKHQZUBRciCwgAFWNEAwAYACAOMAk4vANAAEgVUBBgvANqIAoHCAAQ8ODiShIVCM75xIkHEgcIBBUTn9irMA04AEABGITGpYoNUARYAg",
+			"sockets" : [
+				"radiant_star_amethyst"
+			]
+		},
+		"chest" : {
+			"id" : 133,
+			"name" : "Zunimassa's Marrow",
+			"attrs" : {
+				"intelligence" : 157,
+				"vitality" : 77,
+				"fire-resist" : 43,
+				"resist-all" : 74,
+				"armor" : 181
+			},
+			"stats" : {
+				"armor" : 636
+			},
+			"icon" : "unique_chest_016_104_demonhunter_male",
+			"type" : "chest",
+			"quality" : 7,
+			"_d3id" : "item/Cq4BCO2qxuQMEgcIBBW3rU8eHWXeZ3EdCKEPHh2TAmPqHVtOgMkdeiR_Sh3QNNiIMAk4xQJAAFASYMUCaiUKDAgAEPLsnq2DgICANhIVCJX1-_ABEgcIBBXSXbZ6MAk4AEABaiUKDAgAEP7snq2DgICANhIVCLT_pKgGEgcIBBXSXbZ6MAk4AEABaiUKDAgAEKntnq2DgICANhIVCOOk3fcHEgcIBBXSXbZ6MAk4AEABGO62_eQDUARYAqABp_-YgwSgAe62_eQD",
+			"set" : "zunimassas-whispers",
+			"sockets" : [
+				"radiant_star_topaz",
+				"radiant_star_topaz",
+				"radiant_star_topaz"
+			]
+		},
+		"boots" : {
+			"id" : 134,
+			"name" : "Living Stompers",
+			"attrs" : {
+				"intelligence" : 82,
+				"vitality" : 140,
+				"physical-resist" : 47,
+				"resist-all" : 44,
+				"armor" : 204,
+				"plus-movement" : 12
+			},
+			"stats" : {
+				"armor" : 471
+			},
+			"icon" : "boots_204_wizard_male",
+			"type" : "boots",
+			"quality" : 5,
+			"_d3id" : "item/CkgIqb6T0AkSBwgEFZxFm38dppPE9h1oDhd1HRJW1e4d3nrgTB3hNnAzHQrqUAgiCwgAFc7-AQAYCiAAMAk40QNAAEgBUBBg0QMYuJba-Q9QBFgC",
+			"sockets" : null
+		},
+		"gloves" : {
+			"id" : 135,
+			"name" : "Grip Hate",
+			"attrs" : {
+				"strength" : 80,
+				"intelligence" : 203,
+				"arcane-resist" : 42,
+				"resist-all" : 63,
+				"critical-hit-damage" : 34,
+				"critical-hit" : 10
+			},
+			"stats" : {
+				"armor" : 309
+			},
+			"icon" : "gloves_206_wizard_male",
+			"type" : "gloves",
+			"quality" : 5,
+			"_d3id" : "item/CkgI-d_Y1Q4SBwgEFcdbkqQdE1z0_B0Oa3_9HbjSLcYdBlQFFx3MbHuDHbJX1e4iCwgBFWxCAwAYIiAAMA84sQRAAFAQWARgsQQY8ZDttgtQBFgC",
+			"sockets" : null
+		},
+		"shoulders" : {
+			"id" : 136,
+			"name" : "Vile Ward",
+			"attrs" : {
+				"intelligence" : 249,
+				"vitality" : 49,
+				"arcane-resist" : 38,
+				"resist-all" : 80,
+				"armor" : 253,
+				"life-regen" : 308
+			},
+			"stats" : {
+				"armor" : 653
+			},
+			"icon" : "unique_shoulder_003_104_demonhunter_male",
+			"type" : "shoulders",
+			"quality" : 6,
+			"_d3id" : "item/CjkI5L3v6wsSBwgEFaJwVPEdA-y9Cx1H8ZQ_HcTDgnQdwmqbER0o_n0BHVtOgMkwCTiYA0AAUBJgmAMYu73c6gFQBFgC",
+			"sockets" : null
+		},
+		"pants" : {
+			"id" : 137,
+			"name" : "Mercenary Boon",
+			"attrs" : {
+				"strength" : 35,
+				"intelligence" : 154,
+				"vitality" : 106,
+				"resist-all" : 61
+			},
+			"stats" : {
+				"armor" : 456
+			},
+			"icon" : "pants_206_wizard_male",
+			"type" : "pants",
+			"quality" : 5,
+			"_d3id" : "item/CpEBCIyBh40MEgcIBBWdktWlHcRdD9AdfbLM0B228ewaHbJX1e4deiR_SiILCAAVvkQDABgoIAowCTi6BEAASAFQDmC6BGolCgwIABCpjfT3gICAoDwSFQilm82RCBIHCAQVE5_YqzANOABAAWolCgwIABDJ756tg4CAgDYSFQiMytC9DBIHCAQV0l22ejAJOABAARjFtdOiC1AEWAI",
+			"sockets" : [
+				"radiant_star_amethyst",
+				"radiant_star_topaz"
+			]
+		},
+		"bracers" : {
+			"id" : 138,
+			"name" : "Sling Flourish",
+			"attrs" : {
+				"dexterity" : 77,
+				"intelligence" : 222,
+				"vitality" : 75,
+				"resist-all" : 80,
+				"critical-hit" : 5.5,
+				"range-reduce" : 3
+			},
+			"stats" : {
+				"armor" : 220
+			},
+			"icon" : "bracers_206_demonhunter_male",
+			"type" : "bracers",
+			"quality" : 5,
+			"_d3id" : "item/CkgI45m0zQMSBwgEFdksyssdE1z0_B1bToDJHXYe9g0dDVLdrB2CjbnNHV_MtigiCwgBFXFCAwAYDiAIMA841wNAAFAQWARg1wMYzcyuwwZQBFgC",
+			"sockets" : null
+		},
+		"mainhand" : {
+			"id" : 139,
+			"name" : "Chantodo's Will",
+			"attrs" : {
+				"plus-damage" : 43,
+				"intelligence" : 173,
+				"plus-aps" : 0.25,
+				"ap-on-crit" : 10
+			},
+			"stats" : {
+				"dps" : 1010.195985403061,
+				"damage" : {
+					"min" : 168.73999999999998,
+					"max" : 311.74
+				},
+				"speed" : 1.649999976158142
+			},
+			"icon" : "unique_wand_012_104_wizard_female",
+			"type" : "wand",
+			"quality" : 7,
+			"_d3id" : "item/CmAIxJX-1Q0SBwgEFQa2MkwdhgJj6h3nvppxHUMy-FQdW6Ab2B0SXPT8HWSRAaMwCTioAkAAUBJgqAJqJQoMCAAQjdaRoIKAgOAtEhUIqP-m5wcSBwgEFR6WrpgwDTgAQAEYjNiVwwlQBFgCoAGM2JXDCQ",
+			"set" : "chantodos-return",
+			"sockets" : [
+				"radiant_star_emerald"
+			]
+		},
+		"offhand" : {
+			"id" : 140,
+			"name" : "Brilliant Bequest",
+			"attrs" : {
+				"intelligence" : 195,
+				"vitality" : 204,
+				"critical-hit" : 9.5,
+				"ap-on-crit" : 9
+			},
+			"icon" : "orb_204_wizard_female",
+			"type" : "source",
+			"quality" : 5,
+			"_d3id" : "item/CkYIzOP2lAESBwgEFdjDjnEd8ZRATB0OXPT8HQ5rf_0dZuAuPB238ewaHVugG9giCwgAFWNEAwAYJiAaMAk44gNAAFAQYOIDGLCP9pgOUARYAg",
+			"sockets" : null
+		},
+		"belt" : {
+			"id" : 141,
+			"name" : "Swift Cirque",
+			"attrs" : {
+				"strength" : 128,
+				"dexterity" : 80,
+				"intelligence" : 154,
+				"vitality" : 52,
+				"arcane-resist" : 27,
+				"resist-all" : 69
+			},
+			"stats" : {
+				"armor" : 305
+			},
+			"icon" : "belt_206_wizard_male",
+			"type" : "belt",
+			"quality" : 5,
+			"_d3id" : "item/CkYI05TCtAUSBwgEFb6nQtQdnWyzFB1j6r0LHbJX1e4dTgc6Mh1nF8ExHXokf0oiCwgAFa7-AQAYEiAIMAk4nwNAAFAMYJ8DGIPh6rsFUARYAg",
+			"sockets" : null
+		},
+		"ring2" : {
+			"id" : 142,
+			"name" : "Zunimassa's Pox",
+			"attrs" : {
+				"intelligence" : 84,
+				"vitality" : 66,
+				"physical-resist" : 38,
+				"resist-all" : 65,
+				"plus-life" : 5,
+				"critical-hit-damage" : 34
+			},
+			"icon" : "unique_ring_012_104_wizard_female",
+			"type" : "ring",
+			"quality" : 7,
+			"_d3id" : "item/CjkIvu-iogESBwgEFSzgzN8d9mpQXx0eF1qjHYNFzIwduNItxh05byLFHbJX1e4wCTiqAkAAUBJgqgIYp_-YgwRQBFgCoAGn_5iDBKAB7rb95AM",
+			"set" : "zunimassas-whispers",
+			"sockets" : null
+		},
+		"ring1" : {
+			"id" : 143,
+			"name" : "Hellfire Ring",
+			"attrs" : {
+				"max-damage" : 30,
+				"intelligence" : 198,
+				"resist-all" : 56,
+				"critical-hit" : 4.5,
+				"plus-experience-bonus" : 35
+			},
+			"icon" : "unique_ring_024_104_wizard_female",
+			"type" : "ring",
+			"quality" : 6,
+			"_d3id" : "item/CjkI4afs2wMSBwgEFc85RuIdxMOCdB1dD-WIHSkSc-AdWShz9R2sLjBMHQZ9lkEwDzixAkAAUBJgsQIY4ZjO2wNQBFgC",
+			"sockets" : null
+		},
+		"amulet" : {
+			"id" : 144,
+			"name" : "Cosmic Burden",
+			"attrs" : {
+				"strength" : 110,
+				"intelligence" : 229,
+				"life-hit" : 902,
+				"plus-life" : 8,
+				"critical-hit-damage" : 99,
+				"critical-hit" : 6.5
+			},
+			"icon" : "amulet15_demonhunter_male",
+			"type" : "amulet",
+			"quality" : 5,
+			"_d3id" : "item/CkgImt6T9gUSBwgEFa7FRGQdE1z0_B1nWRe1HZxssxQdMgftdR2KxBbvHaxsf_0iCwgAFa3-AQAYHCAaMA84igRAAFAQWARgigQY3JamxAxQBFgC",
+			"sockets" : null
+		}
+	},
+	"_lastBnetUpdate" : 1369859223,
+	"_lastCrawl" : 1369950463,
+	"actives" : [
+		"arcane-torrent~a",
+		"meteor~a",
+		"slow-time~a",
+		"magic-weapon~e",
+		"familiar~a",
+		"energy-armor~a"
+	],
+	"class" : "wizard",
+	"crawlCount" : 1,
+	"eliteKills" : 36968,
+	"gender" : 1,
+	"hardcore" : false,
+	"id" : 14,
+	"level" : 60,
+	"name" : "Elayne",
+	"paragon" : 93,
+	"passives" : [
+
+	],
+	"stats" : {
+		"primary" : "intelligence",
+		"strength" : 593,
+		"dexterity" : 317,
+		"intelligence" : 2719,
+		"vitality" : 1082,
+		"plus-life" : 13,
+		"armor" : 3590.1,
+		"cold-resist" : 0,
+		"lightning-resist" : 0,
+		"fire-resist" : 43,
+		"arcane-resist" : 107,
+		"poison-resist" : 0,
+		"physical-resist" : 85,
+		"plus-block" : 0,
+		"critical-hit" : 46.5,
+		"critical-hit-damage" : 217,
+		"melee-reduce" : 0,
+		"range-reduce" : 0,
+		"elite-reduce" : 0,
+		"cold-reduce" : 0,
+		"resist-all" : 827.01,
+		"plus-gold-find" : 279,
+		"plus-magic-find" : 279,
+		"ruby-damage-mainhand" : 0,
+		"ruby-damage-offhand" : 0,
+		"hero-class" : "wizard",
+		"ap-max" : 11,
+		"plus-movement" : 12,
+		"life-regen" : 308,
+		"range-reduce-incs" : [
+			3
+		],
+		"dps" : 27419.661587750954,
+		"damage" : {
+			"min" : 168.74,
+			"max" : 311.74
+		},
+		"mhRealDamage" : {
+			"min" : 168.74,
+			"max" : 311.74
+		},
+		"speed" : 1.6499999761581,
+		"mainhand-plus-damage" : 43,
+		"speed-oh" : 0.25,
+		"ap-on-crit" : 19,
+		"max-damage" : 30,
+		"plus-experience-bonus" : 35,
+		"life-hit" : 902,
+		"primary-stat" : 2719,
+		"min-damage" : 0,
+		"attack-speed-incs" : "NaN",
+		"plus-holy-damage" : 0,
+		"life" : 43104.98,
+		"armorReduction" : 0.5326478835625583,
+		"damage-reduction" : 53.264788356255835,
+		"resist-physical" : 903.51,
+		"resist-cold" : 827.01,
+		"resist-fire" : 865.71,
+		"resist-lightning" : 827.01,
+		"resist-poison" : 827.01,
+		"resist-arcane" : 923.3100000000001,
+		"percent-resist-all" : 0.724170541413823,
+		"percent-resist-physical" : 0.7414875544722653,
+		"percent-resist-cold" : 0.724170541413823,
+		"percent-resist-fire" : 0.7332113728180502,
+		"percent-resist-lightning" : 0.724170541413823,
+		"percent-resist-poison" : 0.724170541413823,
+		"percent-resist-arcane" : 0.7456210480412822,
+		"percent-melee-reduce" : 0,
+		"display-percent-melee-reduce" : 0,
+		"percent-range-reduce" : 0.03,
+		"display-percent-range-reduce" : 3,
+		"percent-elite-reduce" : 0,
+		"display-percent-elite-reduce" : 0,
+		"percent-cold-reduce" : 0,
+		"display-percent-cold-reduce" : 0,
+		"block-chance" : "NaN",
+		"dodge-chance" : 15.425,
+		"damageTaken" : 0.1289094812460435,
+		"ehp-physical" : 356781.0489864147,
+		"ehp-cold" : 334381.76605278195,
+		"ehp-fire" : 345713.16800744325,
+		"ehp-lightning" : 334381.76605278195,
+		"ehp-poison" : 334381.76605278195,
+		"ehp-arcane" : 362578.51045159023,
+		"plus-damage-reduce" : 0,
+		"total-armor-reduction" : 53.264788356255835,
+		"total-resist-reduction" : 72.4170541413823,
+		"total-damage-reduction" : 87.10905187539565,
+		"ehp" : 334381.76605278195,
+		"hp-ehp-ratio" : "1:7.76",
+		"ehp-block-dodge" : 395367.1487470079,
+		"ehp-dodge" : 395367.1487470079,
+		"ehp-melee" : 334381.76605278195,
+		"ehp-range" : 344723.4701575071,
+		"ehp-elite" : 334381.76605278195,
+		"ehp-block" : 334381.76605278195,
+		"ehp-helm" : 36492.51068562758,
+		"ehp-gear-total" : 640974.0697550301,
+		"ehp-chest" : 70117.1313877306,
+		"ehp-boots" : 72516.05979581224,
+		"ehp-gloves" : 38179.82609784312,
+		"ehp-shoulders" : 66977.4076192145,
+		"ehp-pants" : 69295.4072297616,
+		"ehp-bracers" : 56499.13309010526,
+		"ehp-mainhand" : 4558.912879433425,
+		"ehp-offhand" : 66764.93135257956,
+		"ehp-belt" : 54320.16285918193,
+		"ehp-ring2" : 51515.859459671774,
+		"ehp-ring1" : 19974.889957286417,
+		"ehp-amulet" : 33761.83734078205,
+		"ehp-pt-resist-all" : 263.5209756899276,
+		"ehp-pt-armor" : 44.6497217323049,
+		"ehp-pt-vitality" : 306.8044306571246,
+		"ehp-pt-plus-life" : 2959.1306730334763,
+		"ehp-pt-intelligence" : 26.35209756909171,
+		"ehp-pt-strength" : 44.6497217323049,
+		"ehp-pt-dexterity" : 116.90335563191911,
+		"ehp-pt-block" : 0,
+		"ehp-pt-melee-reduce" : 3377.5935964927194,
+		"ehp-pt-range-reduce" : 3482.055254116247,
+		"ehp-pt-elite-reduce" : 3377.5935964927194,
+		"dps-mh-min" : 168.74,
+		"dps-mh-max" : 311.74,
+		"plus-max-damage" : 30,
+		"dps-mh-min-total" : 168.74,
+		"dps-mh-max-total" : 341.74,
+		"dps-mh-avg-woele" : 255.24,
+		"dps-oh-avg-woele" : 0,
+		"dps-mh-real-min" : 168.74,
+		"dps-mh-real-max" : 311.74,
+		"dps-mh-real-min-bonus" : 168.74,
+		"dps-mh-real-max-bonus" : 341.74,
+		"dps-mh-avg" : 255.24,
+		"dps-oh-avg" : 0,
+		"bonus-elemental-damage" : 0,
+		"bonus-elemental-percent" : 0,
+		"attack-speed-incs-dw" : " ",
+		"dps-speed-mh" : 1.6494140625,
+		"scram-a-mh" : 16623.880086357003,
+		"dps-speed-display" : 1.649,
+		"scram-s" : 28.19,
+		"scram-c" : 2.0090500000000002,
+		"scram-r" : 1.6494140625,
+		"scram-a" : 255.24,
+		"scram-m" : 1.15,
+		"bonus-damage" : 0.15,
+		"mh-min-damage" : 5470.297689999999,
+		"mh-max-damage" : 11078.698190000001,
+		"mh-min-damage-crit" : 17340.8436773,
+		"mh-max-damage-crit" : 35119.4732623,
+		"inc-ls" : 54.83932317550191,
+		"bes" : "NaN",
+		"dps-helm" : 3028.680054936085,
+		"dps-gear-total" : 69123.68887583123,
+		"dps-chest" : 1527.0971512156466,
+		"dps-boots" : 797.5921426731402,
+		"dps-gloves" : 6294.6460732208725,
+		"dps-shoulders" : 2421.9566283611166,
+		"dps-pants" : 1497.916950873947,
+		"dps-bracers" : 3659.9545207141127,
+		"dps-mainhand" : 27419.661587750954,
+		"dps-offhand" : 4515.640299673079,
+		"dps-belt" : 1497.916950873947,
+		"dps-ring2" : 2910.5094786354675,
+		"dps-ring1" : 4590.421519139414,
+		"dps-amulet" : 8961.695517763455,
+		"dps-extra" : 0,
+		"dps-pt-primary" : 9.7267334472308,
+		"dps-pt-critical-hit" : 296.16318979328935,
+		"dps-pt-critical-hit-damage" : 63.46354066998538,
+		"dps-pt-min-damage" : 53.713488457433414,
+		"dps-pt-max-damage" : 53.713488457433414,
+		"dps-pt-attack-speed" : 274.19661587751034,
+		"dps-pt-elemental-damage" : 274.1966158775067
+	}
+}

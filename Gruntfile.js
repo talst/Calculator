@@ -84,5 +84,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', ['jshint', 'simplemocha', 'coverage']);
 
 	// Travis CI task.
-	grunt.registerTask('travis', ['jshint', 'simplemocha', 'coverage']);
+	grunt.registerTask('travis', ['jshint', 'simplemocha']);
 };

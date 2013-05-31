@@ -7,7 +7,7 @@
     "node": ">=0.10"
   },
   "scripts": {
-		"test": "grunt travis"
+    "test": "grunt travis"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
     "grunt-contrib-jshint": "~0.4.3",
     "grunt-contrib-watch": "~0.4.3",
     "grunt-notify": "~0.2.3",
-    "grunt-simple-mocha": "https://github.com/steveworkman/grunt-simple-mocha/tarball/master"
+    "grunt-simple-mocha": "https://github.com/steveworkman/grunt-simple-mocha/tarball/master",
+    "grunt-istanbul-coverage": "0.0.1"
   }
 }

@@ -1,0 +1,13 @@
+{
+	"life": 31076,
+	"armor": 5320,
+	"resists": {
+		"resist-all":632.7,
+		"resist-physical":720.7,
+		"resist-cold":661.7,
+		"resist-fire":671.7,
+		"resist-lightning":632.7,
+		"resist-poison":727.7,
+		"resist-arcane":666.7
+	}
+}

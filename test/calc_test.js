@@ -138,11 +138,14 @@ suite("calc.js >", function () {
 				});
 			});
 			suite("stats", function() {
-				test("life exists", function() {
-					assert.equal('function', typeof Calc.math.life);
-				});
-				test("armor exists", function() {
-					assert.equal("function", typeof Calc.math.armor);
+				var expected = require('./data/getStatsExpected');
+				_.each(["resists", "life", "armor"], function(stat) {
+					test("function "+ stat +" exists", function() {
+						assert.equal('function', typeof Calc.math[stat]);
+					});					
+					test("function "+ stat +" correct", function() {
+						assert.deepEqual(expected[stat], Calc.math[stat](this.calc));
+					});
 				});
 			});
 		});

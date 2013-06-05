@@ -132,19 +132,15 @@ suite("calc.js >", function () {
 			test("math lib exists", function() {
 				assert.equal('object', typeof Calc.math);
 			});
-			suite("dps", function() {
-				test("dps exists", function() {
-					assert.equal('function', typeof Calc.math.dps);
-				});
-			});
 			suite("stats", function() {
 				var expected = require('./data/getStatsExpected');
-				_.each(["resists", "life", "armor"], function(stat) {
+				_.each(["ehp", "reductions", "resists", "life", "armor"], function(stat) {
 					test("function "+ stat +" exists", function() {
 						assert.equal('function', typeof Calc.math[stat]);
 					});					
 					test("function "+ stat +" correct", function() {
-						assert.deepEqual(expected[stat], Calc.math[stat](this.calc));
+						console.log(this.calc.getStats()[stat]);
+						assert.deepEqual(expected[stat], this.calc.stats[stat]);
 					});
 				});
 			});

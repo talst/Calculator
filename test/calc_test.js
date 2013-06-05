@@ -139,7 +139,6 @@ suite("calc.js >", function () {
 						assert.equal('function', typeof Calc.math[stat]);
 					});					
 					test("function "+ stat +" correct", function() {
-						console.log(this.calc.getStats()[stat]);
 						assert.deepEqual(expected[stat], this.calc.stats[stat]);
 					});
 				});

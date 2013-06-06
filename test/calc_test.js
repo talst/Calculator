@@ -115,31 +115,38 @@ suite("calc.js >", function () {
 		this.calc.setBuild(given);
 		this.calc.calcBase();
 	});
+	
+	suite("getItem >", function() {
+		var testData = require('./data/character');
+		var calc = new Calc(testData);			
+		test("returns false on bad slot", function() {
+			assert.equal(false, calc.getItem('badslot'));
+		});
+		suite("returns items >", function() {
+			_.each(calc.build.gear, function(item, slot) {
+				test("returns " + slot, function() {
+					assert.deepEqual(item, calc.getItem(slot));
+				});							
+			});
+		});
+	});
 
 	suite("getStats >", function() {
-		setup(function() {
-			var testData = require('./data/getStats');
-			this.calc = new Calc(testData);
-		});
-		test("chainable", function() {
-			this.chainable = this.calc.reset();
-			assert.strictEqual(this.chainable, this.calc);
-		});
-		test("returns object", function() {
-			assert.equal('object', typeof this.calc.getStats());
-		});
-		suite("math >", function() {
-			test("math lib exists", function() {
-				assert.equal('object', typeof Calc.math);
-			});
-			suite("stats", function() {
-				var expected = require('./data/getStatsExpected');
-				_.each(["ehp", "reductions", "resists", "life", "armor"], function(stat) {
-					test("function "+ stat +" exists", function() {
-						assert.equal('function', typeof Calc.math[stat]);
-					});					
-					test("function "+ stat +" correct", function() {
-						assert.deepEqual(expected[stat], this.calc.stats[stat]);
+		_.each(require('./data/getStats'), function(data) {
+			suite(data.name + " stats test >", function() {
+				setup(function() {
+					this.calc = new Calc(data.hero);
+				});
+				teardown(function() {
+					this.calc.reset();
+				});
+				_.each(data.expected, function(values, name) {
+					suite(name + " >", function() {
+						_.each(values, function(value, attr) {
+							test(attr + ": ", function() {
+								assert.deepEqual(value, this.calc.stats[name][attr]);								
+							});
+						}, this);
 					});
 				});
 			});

@@ -299,7 +299,8 @@
 						},
 						"mods": {
 							"elemental": {
-
+								"min": 0,
+								"max": 0
 							},
 							"black": 55.565999999999995,
 							"min": 279,
@@ -319,7 +320,8 @@
 						},
 						"mods": {
 							"elemental": {
-
+								"min": 0,
+								"max": 0
 							},
 							"black": 50.6496,
 							"min": 297,
@@ -575,7 +577,11 @@
 						"plus-damage" : 45,
 						"intelligence" : 54,
 						"vitality" : 43,
-						"critical-hit-damage" : 91
+						"critical-hit-damage" : 91,
+						"arcane-damage" : {
+							"min" : 233,
+							"max" : 583
+						}
 					},
 					"stats" : {
 						"dps" : 1033.2800153970718,
@@ -644,6 +650,10 @@
 					"id" : 93,
 					"name" : "Natalya's Reflection",
 					"attrs" : {
+						"minmax-damage" : {
+							"min" : 23,
+							"max" : 52
+						},
 						"dexterity" : 86,
 						"vitality" : 73,
 						"attack-speed" : 9,
@@ -661,6 +671,10 @@
 					"id" : 94,
 					"name" : "Unity",
 					"attrs" : {
+						"minmax-damage" : {
+							"min" : 25,
+							"max" : 58
+						},
 						"strength" : 60,
 						"dexterity" : 245,
 						"life-hit" : 296,
@@ -677,6 +691,10 @@
 					"id" : 95,
 					"name" : "Death Rosary",
 					"attrs" : {
+						"minmax-damage" : {
+							"min" : 21,
+							"max" : 50
+						},
 						"dexterity" : 204,
 						"poison-resist" : 43,
 						"attack-speed" : 8,
@@ -712,7 +730,7 @@
 				"arcane": 520.6300000000001
 			},
 			"dps": {
-				"dps": 116580.29,
+				"dps": 116608.76034346191,
 				"scram": {
 					"a": 760.3,
 					"c": 2.6564,
@@ -732,9 +750,9 @@
 					"oh": {},
 					"mh": {
 						"actual": {
-							"avg": 237.79999999999998,
-							"max": 403.09999999999997,
-							"min": 72.5
+							"avg": 760.3,
+							"max": 1146.1,
+							"min": 374.5
 						},
 						"base": {
 							"min": 50, 
@@ -742,7 +760,9 @@
 						},
 						"mods": {
 							"elemental": {
-
+								"type": "arcane",
+								"min": 233,
+								"max": 583
 							},
 							"black": 0,
 							"min": 0,

@@ -396,5 +396,362 @@
 				"arcane":666.7	
 			}
 		}
+	},
+	{
+		"name": "Josephine 60/17 DH",
+		"hero": {
+			"name" : "Josephine",
+			"class" : "demon-hunter",
+			"level" : 60,
+			"paragon" : 17,
+			"hardcore" : false,
+			"actives" : [
+				"grenades~b",
+				"cluster-arrow~a",
+				"companion~d",
+				"vault~d",
+				"caltrops~e",
+				"shadow-power~c"
+			],
+			"passives" : [
+				"archery",
+				"night-stalker",
+				"perfectionist"
+			],
+			"gear" : {
+				"helm" : {
+					"id" : 83,
+					"name" : "Mempo of Twilight",
+					"attrs" : {
+						"dexterity" : 199,
+						"lightning-resist" : 45,
+						"resist-all" : 71,
+						"attack-speed" : 9,
+						"plus-life" : 12
+					},
+					"stats" : {
+						"armor" : 425
+					},
+					"icon" : "unique_helm_006_104_demonhunter_male",
+					"type" : "helm",
+					"quality" : 6,
+					"_d3id" : "item/Cl4Iv9TkrwwSBwgEFYUioZEdRpPTiR1bToDJHYYCY-oddbHs8B0aEfdmHYf1e24wCTjfAkAASBVQEmDfAmohCgwIABCKyYGHgYCAwBESEQgAEgcIBBXSXbZ6MAk4AEABGPX19uUNUABYAg",
+					"sockets" : [
+						"radiant_star_topaz"
+					]
+				},
+				"chest" : {
+					"id" : 84,
+					"name" : "Blackthorne's Surcoat",
+					"attrs" : {
+						"strength" : 44,
+						"dexterity" : 94,
+						"intelligence" : 38,
+						"vitality" : 187,
+						"resist-all" : 76,
+						"range-reduce" : 5
+					},
+					"stats" : {
+						"armor" : 411
+					},
+					"icon" : "unique_chestarmor_028_104_demonhunter_male",
+					"type" : "chest",
+					"quality" : 7,
+					"_d3id" : "item/Cq0BCMaC0cwIEgcIBBX7ZiUdHdBx8zwdDVfMGh1bToDJHYSNuc0duvHsGh2TAmPqMAk4ygJAAFASYMoCaiQKDAgAEJvUwKOBgIDAKhIUCJLwo1YSBwgEFRyWrpgwCTgAQAFqJQoMCAAQndTAo4GAgMAqEhUIuMXD-wISBwgEFRyWrpgwCTgAQAFqJQoMCAAQjNTAo4GAgMAqEhUIsM71ygkSBwgEFRyWrpgwCTgAQAEY9pur0gNQAFgCoAGzmsemDKABhsau8QGgAfabq9ID",
+					"set" : "blackthornes-armor",
+					"sockets" : [
+						"flawless_star_emerald",
+						"flawless_star_emerald",
+						"flawless_star_emerald"
+					]
+				},
+				"boots" : {
+					"id" : 85,
+					"name" : "Natalya's Bloody Footprints",
+					"attrs" : {
+						"dexterity" : 178,
+						"cold-resist" : 49,
+						"resist-all" : 80,
+						"armor" : 258,
+						"plus-movement" : 12,
+						"melee-reduce" : 5
+					},
+					"stats" : {
+						"armor" : 573
+					},
+					"icon" : "unique_boots_011_104_demonhunter_female",
+					"type" : "boots",
+					"quality" : 7,
+					"_d3id" : "item/CjkIo7De3gsSBwgEFQLsauodjTyBTB3o5anwHSj-fQEdCupQCB3WZoqUHVtOgMkwCTibA0AAUBJgmwMY-8-o2QJQAFgCoAGp4amEBKAB-8-o2QI",
+					"set" : "natalyas-solace",
+					"sockets" : null
+				},
+				"gloves" : {
+					"id" : 86,
+					"name" : "Adroit Gauntlets",
+					"attrs" : {
+						"dexterity" : 245,
+						"intelligence" : 87,
+						"lightning-resist" : 54,
+						"resist-all" : 72,
+						"critical-hit" : 10,
+						"plus-pickup-radius" : 7
+					},
+					"stats" : {
+						"armor" : 334
+					},
+					"icon" : "gloves_206_demonhunter_male",
+					"type" : "gloves",
+					"quality" : 5,
+					"_d3id" : "item/CkgInOO32QESBwgEFcdbkqQdDmt__R1bToDJHX6AuNQdkCb-qx3n5anwHZ8pDogiCwgAFcNEAwAYBCAUMAk4mARAAEgBUAxgmAQY8ZDttgtQAFgC",
+					"sockets" : null
+				},
+				"shoulders" : {
+					"id" : 87,
+					"name" : "Vile Ward",
+					"attrs" : {
+						"dexterity" : 247,
+						"vitality" : 69,
+						"resist-all" : 73,
+						"armor" : 256,
+						"life-regen" : 272,
+						"thorns" : 2021
+					},
+					"stats" : {
+						"armor" : 625
+					},
+					"icon" : "unique_shoulder_003_104_demonhunter_male",
+					"type" : "shoulders",
+					"quality" : 6,
+					"_d3id" : "item/CjkI883yhQkSBwgEFaJwVPEd3Ubxtx3kRJQ1HRoR92YdwmqbER0o_n0BHVtOgMkwCTjTAkAAUBJg0wIYu73c6gFQAFgC",
+					"sockets" : null
+				},
+				"pants" : {
+					"id" : 88,
+					"name" : "Blackthorne's Jousting Mail",
+					"attrs" : {
+						"strength" : 92,
+						"dexterity" : 192,
+						"intelligence" : 100,
+						"vitality" : 99,
+						"life-hit" : 443,
+						"plus-life" : 10,
+						"thorns" : 1321
+					},
+					"stats" : {
+						"armor" : 423
+					},
+					"icon" : "unique_pants_013_104_demonhunter_male",
+					"type" : "pants",
+					"quality" : 7,
+					"_d3id" : "item/CjkIg46CxQESBwgEFYPRFQ8dzLstgB3QcfM8HfKCOPwdnC4Lfx2K8LFfHYf1e24wCTiTAkAAUBJgkwIYhsau8QFQAFgCoAGzmsemDKABhsau8QGgAfabq9ID",
+					"set" : "blackthornes-armor",
+					"sockets" : null
+				},
+				"bracers" : {
+					"id" : 89,
+					"name" : "Lacuni Prowlers",
+					"attrs" : {
+						"dexterity" : 84,
+						"fire-resist" : 45,
+						"attack-speed" : 9,
+						"plus-movement" : 12,
+						"thorns" : 1104,
+						"critical-hit" : 4.5
+					},
+					"stats" : {
+						"armor" : 233
+					},
+					"icon" : "unique_bracer_005_104_demonhunter_male",
+					"type" : "bracers",
+					"quality" : 6,
+					"_d3id" : "item/CjkI39C4ugkSBwgEFY2__hcdBn2WQR2PvJa3HQihDx4dzLstgB0K6lAIHXWx7PAwCTi3AkAAUBJgtwIYmv71_wJQAFgC",
+					"sockets" : null
+				},
+				"mainhand" : {
+					"id" : 90,
+					"name" : "Sylvan Stem",
+					"attrs" : {
+						"plus-damage" : 45,
+						"intelligence" : 54,
+						"vitality" : 43,
+						"critical-hit-damage" : 91
+					},
+					"stats" : {
+						"dps" : 1033.2800153970718,
+						"damage" : {
+							"min" : 72.5,
+							"max" : 403.09999999999997
+						},
+						"speed" : 1.600000023841858
+					},
+					"icon" : "handxbow_208_demonhunter_female",
+					"type" : "hand-crossbow",
+					"quality" : 5,
+					"_d3id" : "item/CmgIxoLmywwSBwgEFdQdV-odhgJj6h2fVKRHHWdZF7UdU0SnXR3nvppxIgsIABXHRAMAGAIgGjAJOJAEQABQDmCQBGolCgwIABCls6GNgoCAwAkSFQj0_c-NDhIHCAQVHpaumDANOABAARjXiMfaAlAAWAI",
+					"sockets" : [
+						"radiant_star_emerald"
+					]
+				},
+				"offhand" : {
+					"id" : 91,
+					"name" : "Assassin's Fortress",
+					"attrs" : {
+						"dexterity" : 176,
+						"vitality" : 165,
+						"lightning-resist" : 54,
+						"plus-block" : 8,
+						"critical-hit" : 9.5
+					},
+					"stats" : {
+						"armor" : 1140,
+						"block-chance" : 25,
+						"block-amount" : {
+							"min" : 3706,
+							"max" : 4706
+						}
+					},
+					"icon" : "shield_207_104_demonhunter_male",
+					"type" : "shield",
+					"quality" : 5,
+					"_d3id" : "item/Cm0I0dvGyA0SBwgEFWWbSewdwxrJex2GAmPqHbnx7BodDmt__R3o5anwHZ8pDogiCwgAFa7-AQAYFiAIMAk4mwVAAFAQYJsFaiUKDAgAEOCx_LOAgICAFxIVCJKz48UPEgcIBBUclq6YMA04AEABGLWSs7sCUABYAg",
+					"sockets" : [
+						"flawless_star_emerald"
+					]
+				},
+				"belt" : {
+					"id" : 92,
+					"name" : "Blackthorne's Notched Belt",
+					"attrs" : {
+						"dexterity" : 185,
+						"lightning-resist" : 46,
+						"resist-all" : 65,
+						"armor" : 249,
+						"plus-gold-find" : 22,
+						"life-regen" : 278
+					},
+					"stats" : {
+						"armor" : 549
+					},
+					"icon" : "unique_belt_015_104_demonhunter_male",
+					"type" : "belt",
+					"quality" : 7,
+					"_d3id" : "item/CjkI1-SH3gUSBwgEFWYZl50dslfV7h1v_EXEHSj-fQEdX_FjBB0aEfdmHcJqmxEwCTi3AkAAUBJgtwIYs5rHpgxQAFgCoAGzmsemDKABhsau8QGgAfabq9ID",
+					"set" : "blackthornes-armor",
+					"sockets" : null
+				},
+				"ring2" : {
+					"id" : 93,
+					"name" : "Natalya's Reflection",
+					"attrs" : {
+						"dexterity" : 86,
+						"vitality" : 73,
+						"attack-speed" : 9,
+						"life-hit" : 134,
+						"life-regen" : 203
+					},
+					"icon" : "unique_ring_011_104_demonhunter_female",
+					"type" : "ring",
+					"quality" : 7,
+					"_d3id" : "item/CjkIlqDKyQ0SBwgEFavHut8dOkSumx1fzLYoHS9jImwddbHs8B2PvJa3HYG1PowwCTjKAkAAUBJgygIYqeGphARQAFgCoAGp4amEBKAB-8-o2QI",
+					"set" : "natalyas-solace",
+					"sockets" : null
+				},
+				"ring1" : {
+					"id" : 94,
+					"name" : "Unity",
+					"attrs" : {
+						"strength" : 60,
+						"dexterity" : 245,
+						"life-hit" : 296,
+						"critical-hit" : 4.5,
+						"elite-damage" : 3
+					},
+					"icon" : "unique_ring_010_104_demonhunter_female",
+					"type" : "ring",
+					"quality" : 6,
+					"_d3id" : "item/CjkI6q7wsgsSBwgEFSqvqN8dWljkxx28Hz3iHbHN23YdBn2WQR3ZW5rhHZRRsqowCTiOAkAAUBJgjgIYq8O6hQRQAFgC",
+					"sockets" : null
+				},
+				"amulet" : {
+					"id" : 95,
+					"name" : "Death Rosary",
+					"attrs" : {
+						"dexterity" : 204,
+						"poison-resist" : 43,
+						"attack-speed" : 8,
+						"critical-hit-damage" : 87,
+						"plus-gold-find" : 24
+					},
+					"icon" : "amulet15_demonhunter_male",
+					"type" : "amulet",
+					"quality" : 5,
+					"_d3id" : "item/CkcIqbG7ShIHCAQVrsVEZB3p5anwHWdZF7Ud5dF0Ax06HSgqHfux9T4ddbHs8CILCAAVqv4BABguIAowDzi1A0AAUBBYBGC1AxjclqbEDFAAWAI",
+					"sockets" : null
+				}
+			}
+		},
+		"expected": {
+			"armor": 5492.3,
+			"strength":	280,
+			"dexterity": 2573,
+			"intelligence":	363,
+			"vitality": 897,
+			"attack-speed": 35,
+			"critical-hit": 50.5,
+			"chance": {
+				"block": 25,
+				"dodge": 45.730000000000004
+			},
+			"resists": {
+				"physical": 520.6300000000001,
+				"cold": 574.53,
+				"fire":	570.13,
+				"lightning": 739.53,
+				"poison": 567.93,
+				"arcane": 520.6300000000001
+			},
+			"dps": {
+				"dps": 116580.29,
+				"scram": {
+					"a": 760.3,
+					"c": 2.6564,
+					"m": 1,
+					"r": 2.1600000321865083,
+					"s": 26.73
+				},
+				"speeds": {
+					"mh": {
+						"aps": 2.1600000321865083,
+						"speed": 1.600000023841858,
+						"tickrate": 6.6666666666666667
+					},
+					"oh": {}
+				},
+				"damage": {
+					"oh": {},
+					"mh": {
+						"actual": {
+							"avg": 237.79999999999998,
+							"max": 403.09999999999997,
+							"min": 72.5
+						},
+						"base": {
+							"min": 50, 
+							"max": 278
+						},
+						"mods": {
+							"elemental": {
+
+							},
+							"black": 0,
+							"min": 0,
+							"max": 0,
+							"dmg": 45
+						}
+					}
+				}
+			}
+		}
 	}
 ]

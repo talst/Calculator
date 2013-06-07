@@ -133,6 +133,7 @@ suite("calc.js >", function () {
 
 	suite("getStats >", function() {
 		_.each(require('./data/getStats'), function(data) {
+			console.log(data.name);
 			suite(data.name + " stats test >", function() {
 				setup(function() {
 					this.calc = new Calc(data.hero);
@@ -141,13 +142,19 @@ suite("calc.js >", function () {
 					this.calc.reset();
 				});
 				_.each(data.expected, function(values, name) {
-					suite(name + " >", function() {
-						_.each(values, function(value, attr) {
-							test(attr + ": ", function() {
-								assert.deepEqual(value, this.calc.stats[name][attr]);								
-							});
-						}, this);
-					});
+					if(_.isObject(values)) {
+						suite(name + " >", function() {
+							_.each(values, function(value, attr) {
+								test(attr + ": ", function() {
+									assert.deepEqual(value, this.calc.stats[name][attr]);								
+								});
+							}, this);
+						});						
+					} else {
+						test(name, function() {
+							assert.deepEqual(values, this.calc.stats[name]);
+						});
+					}
 				});
 			});
 		});

@@ -402,11 +402,12 @@ suite("calc.js >", function () {
 		setup(function() { 
 			this.testData = require('./data/character');
 			this.calc = new Calc();
-			sinon.stub(this.calc, 'activateSkills');
 			sinon.stub(this.calc, 'calcBase');
 			sinon.stub(this.calc, 'parseItems');
-			sinon.stub(this.calc, 'parseSkills');
 			sinon.stub(this.calc, 'parseSetBonuses');
+			sinon.stub(this.calc, 'parseSkills');
+			sinon.stub(this.calc, 'activateSkills');
+			sinon.stub(this.calc, 'getStats');
 			sinon.stub(this.calc, 'reset');
 			this.calc.setBuild(this.testData);
 			this.calc.run();
@@ -414,10 +415,14 @@ suite("calc.js >", function () {
 		teardown(function() {
 			this.calc.calcBase.restore();
 			this.calc.parseItems.restore();
-			this.calc.parseSkills.restore();
 			this.calc.parseSetBonuses.restore();
+			this.calc.parseSkills.restore();
 			this.calc.activateSkills.restore();
+			this.calc.getStats.restore();
 			this.calc.reset.restore();
+		});
+		test("calls getStats", function() {
+			assert.ok(this.calc.getStats.called);
 		});
 		test("calls activateSkills", function() {
 			assert.ok(this.calc.activateSkills.called);

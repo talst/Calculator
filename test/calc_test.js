@@ -116,6 +116,33 @@ suite("calc.js >", function () {
 		this.calc.calcBase();
 	});
 	
+	suite("calcSkills >", function() {
+		var testData = require('./data/calcSkills');
+		var gamedata = require("../data/gamedata.json");
+		_.each(testData, function(dataset) {
+			_.each(dataset.expected, function(data, skill) {
+				suite(skill + ">", function() {
+					setup(function() {
+						dataset.given.actives = _.keys(gamedata.actives[dataset.given['class']]);
+						this.calc = new Calc(dataset.given);
+					});
+					teardown(function() {
+						this.calc.reset();
+					});
+					test("dps is correct", function() {
+						assert.deepEqual(data.dps, this.calc.stats.skill[skill].dps);												
+					});
+					test("scramer is correct", function() {
+						assert.deepEqual(data.scrame, this.calc.stats.skill[skill].scrame);												
+					});
+					test("procs are correct", function() {
+						assert.deepEqual(data.procs, this.calc.stats.skill[skill].procs);																									
+					});
+				});				
+			});
+		});
+	});
+	
 	suite("getItem >", function() {
 		var testData = require('./data/character');
 		var calc = new Calc(testData);			
@@ -133,7 +160,6 @@ suite("calc.js >", function () {
 
 	suite("getStats >", function() {
 		_.each(require('./data/getStats'), function(data) {
-			console.log(data.name);
 			suite(data.name + " stats test >", function() {
 				setup(function() {
 					this.calc = new Calc(data.hero);
@@ -390,6 +416,10 @@ suite("calc.js >", function () {
 			assert.ok(this.calc.sets);
 			assert.deepEqual({}, this.calc.sets);
 		});
+		test("creates stats", function() {
+			assert.ok(this.calc.stats);
+			assert.deepEqual({}, this.calc.stats);
+		});
 		test("overwrites attrs", function() {
 			var attrs = this.calc.attrs;
 			this.calc.reset();
@@ -408,6 +438,7 @@ suite("calc.js >", function () {
 			sinon.stub(this.calc, 'parseSkills');
 			sinon.stub(this.calc, 'activateSkills');
 			sinon.stub(this.calc, 'getStats');
+			sinon.stub(this.calc, 'calcSkills');
 			sinon.stub(this.calc, 'reset');
 			this.calc.setBuild(this.testData);
 			this.calc.run();
@@ -419,6 +450,7 @@ suite("calc.js >", function () {
 			this.calc.parseSkills.restore();
 			this.calc.activateSkills.restore();
 			this.calc.getStats.restore();
+			this.calc.calcSkills.restore();
 			this.calc.reset.restore();
 		});
 		test("calls getStats", function() {
@@ -435,6 +467,9 @@ suite("calc.js >", function () {
 		});
 		test("calls parseSkills", function() {
 			assert.ok(this.calc.parseSkills.called);
+		});
+		test("calls calcSkills", function() {
+			assert.ok(this.calc.calcSkills.called);
 		});
 		test("calls parseSetBonuses", function() {
 			assert.ok(this.calc.parseSetBonuses.called);

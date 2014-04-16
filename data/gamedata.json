@@ -74,7 +74,7 @@
                     }
                 }
             },
-            "bloodthirst": {//need to check
+            "bloodthirst": {
                 "desc": "Each point of Fury spent heals you for <span class='skill-highlight'>578</span> Life. Heal amount is increased by <span class='skill-highlight'>1%</span> of your Health Globe Healing Bonus.",
                 "effect": {
                     "life-fury": 578,
@@ -92,7 +92,7 @@
                 }
             },
             "superstition": {
-                "desc": "Reduces all non-Physical damage by <span class='skill-highlight'>20%</span>. Whenever you take damage from a ranged or elemental attack, you have a chance to gain <span class='skill-highlight'>3</span> Fury.",
+                "desc": "Reduces all non-Physical damage by <span class='skill-highlight'>20%</span>. Whenever you take damage from a ranged or elemental attack, you have a chance to gain <span class='skill-highlight'>2</span> Fury.",
                 "effect": {
                     "reduce-non-physical": 20
                 }
@@ -106,28 +106,25 @@
                     }
                 }
             },
-            "no-escape": {
-                "desc": "Increases the damage of Ancient Spear and Weapon Throw by <span class='skill-highlight'>10%</span>. In addition, a Critical Hit with Ancient Spear resets the cooldown while Critical Hits with Weapon Throw have a chance to return <span class='skill-highlight'>14</span> Fury.",
-                "procEffect": {
-                    "generate-fury-throw": 14
-                },
+            "no-escape": {// maybe no effect at all
+                "desc": "Increase the damage of Weapon Throw and Ancient Spear by <span class='skill-highlight'>25%</span> against enemies more than <span class='skill-highlight'>20</span> yards away from you.",
                 "effect": {
-                    "bb-weapon-throw-dmg": 10
+                    "bb-weapon-throw-dmg": 25
                 }
             },
             "relentless": {
-                "desc": "While below <span class='skill-highlight'>20%</span> Life, all skills cost no Fury and all damage taken is reduced by <span class='skill-highlight'>50%</span>."
+                "desc": "While below <span class='skill-highlight'>35%</span> Life, all skills cost <span class='skill-highlight'>75%</span> less Fury and all damage taken is reduced by <span class='skill-highlight'>50%</span>."
             },
             "brawler": {
-                "desc": "As long as there are <span class='skill-highlight'>3</span> enemies within <span class='skill-highlight'>8</span> yards, all of your damage is increased by <span class='skill-highlight'>30%</span>.",
+                "desc": "As long as there are <span class='skill-highlight'>3</span> enemies within <span class='skill-highlight'>12</span> yards, all of your damage is increased by <span class='skill-highlight'>20%</span>.",
                 "effect": {
-                    "plus-damage-conditional": 30
+                    "plus-damage-conditional": 20
                 }
             },
             "juggernaut": {
-                "desc": "The duration of control impairing effects on you are reduced by <span class='skill-highlight'>20%</span>. In addition, whenever a Stun, Fear, Immobilize or Charm is cast on you, you have a chance to recover <span class='skill-highlight'>15%</span> of your maximum Life.",
+                "desc": "The duration of control impairing effects on you are reduced by <span class='skill-highlight'>30%</span>. In addition, whenever a Stun, Fear, Immobilize or Charm is cast on you, you have a chance to recover <span class='skill-highlight'>20%</span> of your maximum Life.",
                 "effect": {
-                    "cc-reduce": 0.2
+                    "cc-reduce": 0.3
                 }
             },
             "unforgiving": {
@@ -137,7 +134,19 @@
                 }
             },
             "boon-of-bulkathos": {
-                "desc": "The cooldown on your Earthquake, Call of the Ancients, and Wrath of the Berserker skills is reduced by <span class='skill-highlight'>30</span> seconds."
+                "desc": "Reduce the cooldowns of your:<br />Earthquake by <span class='skill-highlight'>15</span> seconds.<br />Call of the Ancients by <span class='skill-highlight'>30</span> seconds.<br />Wrath of the Berserker by <span class='skill-highlight'>30</span> seconds."
+            },
+            "earthen-might": {
+                "desc": "Gain <span class='skill-highlight'>30</span> Fury when activating Avalanche or Earthquake."
+            },
+            "sword-and-board": {
+                "desc": "Blocking an attack generates <span class='skill-highlight'>6</span> Fury.",
+                "effect": {
+                    "block-fury": 6
+                }
+            },
+            "rampage": {
+                "desc": "Increase Strength by <span class='skill-highlight'>1%</span> for <span class='skill-highlight'>8</span> seconds after killing or assisting in killing an enemy. This effect stacks up to <span class='skill-highlight'>25</span> times."
             }
         },
         "monk": {
@@ -9983,6 +9992,7 @@
         "plus-dodge": "+[X]% Dodge",
         "plus-movement-speed": "+[X]% Movement Speed",
         "plus-life-steal": "+[X]% Life Steal",
-        "damage-reduce-conditional": "[X]% Damage Reduction"
+        "damage-reduce-conditional": "[X]% Damage Reduction",
+        "block-fury": "Generate [X] Fury when blocking"
     }
 }
